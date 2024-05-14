@@ -1,0 +1,10 @@
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.exe.config
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.exe
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.pdb
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.AssemblyReference.cache
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.Properties.Resources.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.Form1.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.GenerateResource.cache
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.CoreCompileInputs.cache
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.exe
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.pdb
