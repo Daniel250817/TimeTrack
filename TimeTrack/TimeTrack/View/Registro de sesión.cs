@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TimeTrack.Model.Model;
 
 namespace TimeTrack
 {
     public partial class Form1 : Form
     {
+        private Empleado empleado;
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +27,16 @@ namespace TimeTrack
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

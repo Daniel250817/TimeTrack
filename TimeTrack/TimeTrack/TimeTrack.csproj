@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Registro de sesión.cs">
+    <Compile Include="Model\Model.cs" />
+    <Compile Include="Presenter\Presenter.cs" />
+    <Compile Include="View\Registro de sesión.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro de sesión.Designer.cs">
+    <Compile Include="View\Registro de sesión.Designer.cs">
       <DependentUpon>Registro de sesión.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -64,7 +66,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Registro de sesión.resx">
+    <EmbeddedResource Include="View\Registro de sesión.resx">
       <DependentUpon>Registro de sesión.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -80,13 +82,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="Presenter\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Recursos\Salir.png" />
+    <Content Include="Recursos\TimeTrackNobg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
