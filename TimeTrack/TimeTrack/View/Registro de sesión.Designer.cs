@@ -1,6 +1,6 @@
 ﻿namespace TimeTrack
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSession = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LabelTitulo = new System.Windows.Forms.Label();
-            this.btnSession = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,18 @@
             this.panel1.Size = new System.Drawing.Size(444, 479);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnSession
+            // 
+            this.btnSession.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSession.Location = new System.Drawing.Point(149, 375);
+            this.btnSession.Name = "btnSession";
+            this.btnSession.Size = new System.Drawing.Size(144, 33);
+            this.btnSession.TabIndex = 8;
+            this.btnSession.Text = "iniciar sesión";
+            this.btnSession.UseVisualStyleBackColor = false;
+            this.btnSession.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnClose
             // 
@@ -151,19 +163,7 @@
             this.LabelTitulo.TabIndex = 0;
             this.LabelTitulo.Text = "Iniciar Sesión";
             // 
-            // btnSession
-            // 
-            this.btnSession.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSession.Location = new System.Drawing.Point(149, 375);
-            this.btnSession.Name = "btnSession";
-            this.btnSession.Size = new System.Drawing.Size(144, 33);
-            this.btnSession.TabIndex = 8;
-            this.btnSession.Text = "iniciar sesión";
-            this.btnSession.UseVisualStyleBackColor = false;
-            this.btnSession.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Form1
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +173,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Usuarios";
             this.Load += new System.EventHandler(this.Form1_Load);

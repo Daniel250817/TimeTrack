@@ -1,84 +1,112 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace TimeTrack.Model
 {
     internal class Model
     {
-        // Clase que representa una empresa
-        public class Empresa
-        {
-            public int Id { get; set; }
-            public string Nombre { get; set; }
-            public string Descripcion { get; set; }
-            public string Direccion { get; set; }
-            public List<Empleado> Empleados { get; set; } // Relación uno a muchos con Empleado
-        }
-
-        // Clase que representa un empleado
-        public class Empleado
-        {
-            public int Id { get; set; }
-            public string Nombres { get; set; }
-            public string Apellidos { get; set; }
-            public DateTime FechaNacimiento { get; set; }
-            public decimal Sueldo { get; set; }
-            public string Direccion { get; set; }
-            public string Telefono { get; set; }
-            public int EmpresaId { get; set; } // Clave foránea a Empresa
-            public int HorarioId { get; set; } // Clave foránea a Horario
-            public Empresa Empresa { get; set; } // Relación muchos a uno con Empresa
-            public Horario Horario { get; set; } // Relación uno a uno con Horario
-            public List<RegistroHora> RegistrosHora { get; set; } // Relación uno a muchos con RegistroHora
-            public List<Nomina> Nominas { get; set; } // Relación uno a muchos con Nomina
-        }
-
-        // Clase que representa el horario de un empleado
-        public class Horario
-        {
-            public int Id { get; set; }
-            public DateTime Horario1 { get; set; }
-            public DateTime Horario2 { get; set; }
-            public DateTime Horario3 { get; set; }
-        }
-
-        // Clase que representa una nómina
-        public class Nomina
-        {
-            public int Id { get; set; }
-            public decimal Sueldo { get; set; }
-            public int EmpleadoId { get; set; } // Clave foránea a Empleado
-            public int EmpresaId { get; set; } // Clave foránea a Empresa
-            public string Concepto { get; set; }
-            public decimal Descuento { get; set; }
-            public string Descripcion { get; set; }
-            public Empleado Empleado { get; set; } // Relación muchos a uno con Empleado
-            public Empresa Empresa { get; set; } // Relación muchos a uno con Empresa
-        }
-
-        // Clase que representa un usuario
         public class Usuario
         {
-            public int Id { get; set; }
             public string NombreUsuario { get; set; }
-            public string Contraseña { get; set; }
-            public int Nivel { get; set; }
-            public int EmpleadoId { get; set; } // Clave foránea a Empleado
-            public Empleado Empleado { get; set; } // Relación uno a uno con Empleado
+            public string Contrasena { get; set; }
         }
 
-        // Clase que representa un registro de hora de un empleado
-        public class RegistroHora
+        public class Empleado 
         {
-            public int Id { get; set; }
-            public int EmpleadoId { get; set; } // Clave foránea a Empleado
-            public DateTime FechaIn { get; set; }
-            public DateTime FechaOut { get; set; }
-            public float Jornada { get; set; }
-            public Empleado Empleado { get; set; } // Relación muchos a uno con Empleado
+            public int id { get; set; }
+            public string nombre { get; set; }
+            public string apellido { get; set; }
+            public string cargo { get; set; }
+
+        }
+
+
+
+
+        public static Empleado ObtenerDatosEmpleadoLogueado(string nombreUsuario)
+        {
+            Empleado empleado = new Empleado();
+
+            // Obtener la cadena de conexión desde app.config
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                // Consulta SQL para obtener los datos del empleado asociados al nombre de usuario
+                string consulta = "SELECT e.id_empleado, e.nombres, e.apellidos, c.cargo_empleado AS cargo " +
+                                  "FROM empleado e " +
+                                  "JOIN usuarios u ON e.id_empleado = u.id_empleado " +
+                                  "JOIN cargo c ON e.id_cargo = c.id_cargo " +
+                                  "WHERE u.nombre_usuario = @NombreUsuario";
+
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
+
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Ejecutar la consulta y leer los resultados
+                    using (SqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Asignar los valores leídos a las propiedades del objeto Empleado
+                            empleado.id = reader.GetInt32(reader.GetOrdinal("id_empleado"));
+                            empleado.nombre = reader.GetString(reader.GetOrdinal("nombres"));
+                            empleado.apellido = reader.GetString(reader.GetOrdinal("apellidos"));
+                            empleado.cargo = reader.GetString(reader.GetOrdinal("cargo"));
+                        }
+                    }
+                }
+            }
+
+            return empleado;
+        }
+
+
+        // Clase que maneja la lógica de negocio y la autenticación
+        public class ModelManager
+        {
+            // Método para verificar las credenciales del usuario
+            public bool VerificarCredenciales(string nombreUsuario, string contrasena)
+            {
+                try
+                {
+                    // Obtener la cadena de conexión desde app.config
+                    string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+                    using (SqlConnection conexion = new SqlConnection(connectionString))
+                    {
+                        // Abrir la conexión
+                        conexion.Open();
+
+                        // Consulta SQL para verificar las credenciales
+                        string consulta = "SELECT COUNT(*) FROM Usuarios WHERE nombre_usuario = @NombreUsuario AND contrasena = @Contrasena";
+
+                        using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                        {
+                            // Añadir parámetros para evitar inyección SQL
+                            comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
+                            comando.Parameters.AddWithValue("@Contrasena", contrasena);
+
+                            // Ejecutar la consulta y obtener el resultado
+                            int cantidadFilas = (int)comando.ExecuteScalar();
+
+                            // La consulta debe devolver exactamente 1 fila si las credenciales son correctas
+                            return cantidadFilas == 1;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejar cualquier excepción que pueda ocurrir
+                    Console.WriteLine("Error al verificar las credenciales: " + ex.Message);
+                    return false;
+                }
+            }
         }
     }
 }
