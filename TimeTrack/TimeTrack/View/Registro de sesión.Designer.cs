@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnSession = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnSession);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.label3);
@@ -57,7 +59,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(444, 479);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(360, 309);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 30);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "👁️";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.lblPassEye_Click);
             // 
             // btnSession
             // 
@@ -173,6 +185,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(800, 450);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Usuarios";
@@ -197,6 +210,7 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSession;
+        private System.Windows.Forms.Label label4;
     }
 }
 

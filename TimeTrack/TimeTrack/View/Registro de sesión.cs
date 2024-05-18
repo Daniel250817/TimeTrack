@@ -14,13 +14,15 @@ namespace TimeTrack
 {
     public partial class FormLogin : Form, ILoginView
     {
-        private Model.Model.ModelManager modelManager;
+        private ModelManager modelManager;
         private Presenter.Presenter presenter;
+
+        private bool mostrarPassword = false;
 
         public FormLogin()
         {
             InitializeComponent();
-            modelManager = new Model.Model.ModelManager();
+            modelManager = new ModelManager();
             presenter = new Presenter.Presenter(this);
         }
 
@@ -42,11 +44,6 @@ namespace TimeTrack
             this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string nombreUsuario = txtUser.Text;
@@ -61,6 +58,24 @@ namespace TimeTrack
             else
             {
                 MessageBox.Show("Nombre de usuario o contraseña incorrectos");
+            }
+        }
+
+        private void lblPassEye_Click(object sender, EventArgs e)
+        {
+            // Si mostrarPassword es false, mostramos el texto en claro
+            if (!mostrarPassword)
+            {
+                txtPass.UseSystemPasswordChar = false; // Mostrar texto en claro
+                txtPass.Text = txtPass.Text; // Actualizar el texto (no es necesario, pero para asegurarse)
+                mostrarPassword = true;
+            }
+            // Si mostrarPassword es true, mostramos el texto oculto
+            else
+            {
+                txtPass.UseSystemPasswordChar = true; // Ocultar texto con asteriscos
+                txtPass.Text = txtPass.Text; // Actualizar el texto (no es necesario, pero para asegurarse)
+                mostrarPassword = false;
             }
         }
     }

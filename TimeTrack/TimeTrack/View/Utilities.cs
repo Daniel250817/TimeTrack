@@ -21,7 +21,6 @@ namespace TimeTrack.View
             ResizePanel(panel, radio);
         }
 
-
         private static void ResizePanel(Panel panel, int radio)
         {
             // Crear un rectángulo con las dimensiones del panel

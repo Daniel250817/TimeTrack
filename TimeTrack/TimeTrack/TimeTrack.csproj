@@ -85,6 +85,7 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ILoginView.cs" />
+    <Compile Include="View\IMainView.cs" />
     <Compile Include="View\Registro de sesión.cs">
       <SubType>Form</SubType>
     </Compile>

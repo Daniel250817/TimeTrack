@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblCargo = new System.Windows.Forms.Label();
+            this.panelDatosUser = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,11 +41,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelChild = new System.Windows.Forms.Panel();
-            this.panelDatosUser = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panelDatosUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panelDatosUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,18 +60,16 @@
             this.panel1.Size = new System.Drawing.Size(1027, 110);
             this.panel1.TabIndex = 0;
             // 
-            // lblCargo
+            // panelDatosUser
             // 
-            this.lblCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCargo.Location = new System.Drawing.Point(25, 46);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(282, 16);
-            this.lblCargo.TabIndex = 3;
-            this.lblCargo.Text = "Rol ";
-            this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblCargo.Click += new System.EventHandler(this.lblCargo_Click);
+            this.panelDatosUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDatosUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(80)))), ((int)(((byte)(255)))));
+            this.panelDatosUser.Controls.Add(this.lblUser);
+            this.panelDatosUser.Controls.Add(this.lblCargo);
+            this.panelDatosUser.Location = new System.Drawing.Point(675, 19);
+            this.panelDatosUser.Name = "panelDatosUser";
+            this.panelDatosUser.Size = new System.Drawing.Size(322, 75);
+            this.panelDatosUser.TabIndex = 4;
             // 
             // lblUser
             // 
@@ -84,7 +82,18 @@
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "User";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCargo.Location = new System.Drawing.Point(25, 46);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(282, 16);
+            this.lblCargo.TabIndex = 3;
+            this.lblCargo.Text = "Rol ";
+            this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -123,30 +132,33 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(16, 124);
+            this.button3.Location = new System.Drawing.Point(15, 168);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(245, 31);
             this.button3.TabIndex = 3;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(15, 77);
+            this.button2.Location = new System.Drawing.Point(14, 121);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(245, 31);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 29);
+            this.button1.Location = new System.Drawing.Point(15, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(245, 31);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -170,17 +182,6 @@
             this.panelChild.Size = new System.Drawing.Size(688, 370);
             this.panelChild.TabIndex = 2;
             // 
-            // panelDatosUser
-            // 
-            this.panelDatosUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDatosUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(80)))), ((int)(((byte)(255)))));
-            this.panelDatosUser.Controls.Add(this.lblUser);
-            this.panelDatosUser.Controls.Add(this.lblCargo);
-            this.panelDatosUser.Location = new System.Drawing.Point(675, 19);
-            this.panelDatosUser.Name = "panelDatosUser";
-            this.panelDatosUser.Size = new System.Drawing.Size(322, 75);
-            this.panelDatosUser.TabIndex = 4;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,10 +200,10 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelDatosUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelDatosUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

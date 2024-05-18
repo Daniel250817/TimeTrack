@@ -23,8 +23,6 @@ namespace TimeTrack.Model
         }
 
 
-
-
         public static Empleado ObtenerDatosEmpleadoLogueado(string nombreUsuario)
         {
             Empleado empleado = new Empleado();
@@ -62,7 +60,6 @@ namespace TimeTrack.Model
                     }
                 }
             }
-
             return empleado;
         }
 

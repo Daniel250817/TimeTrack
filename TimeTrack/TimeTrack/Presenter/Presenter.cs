@@ -10,6 +10,7 @@ namespace TimeTrack.Presenter
     {
         private readonly ILoginView _vista;
         private readonly ModelManager _modelo;
+        private readonly IMainView _mainVista;
 
         public Presenter(ILoginView vista)
         {
