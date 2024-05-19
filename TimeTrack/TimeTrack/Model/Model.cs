@@ -22,6 +22,21 @@ namespace TimeTrack.Model
 
         }
 
+        public class Nomina
+        {
+            public int idNomina { get; set; }
+            public int id_empleado { get; set; }
+            public DateTime fecha { get; set; }
+            public decimal salario { get; set; }
+            public decimal descuento { get; set; }
+            public decimal salarioBase { get; set; }
+            public decimal montoHrsExtra { get; set; }
+            public decimal montoHrsDescuento { get; set; }
+            public decimal salarioNeto { get; set; }
+        }
+
+
+
 
         public static Empleado ObtenerDatosEmpleadoLogueado(string nombreUsuario)
         {
@@ -62,6 +77,7 @@ namespace TimeTrack.Model
             }
             return empleado;
         }
+
 
 
         // Clase que maneja la lógica de negocio y la autenticación

@@ -24,6 +24,9 @@ namespace TimeTrack
             InitializeComponent();
             modelManager = new ModelManager();
             presenter = new Presenter.Presenter(this);
+
+            txtPass.Text = "12345";
+            txtUser.Text = "JulioAdmin";
         }
 
         public void MostrarMensajeError(string mensaje)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeTrack.Presenter;
 using static TimeTrack.Model.Model;
 
 namespace TimeTrack.View
@@ -14,18 +15,21 @@ namespace TimeTrack.View
     public partial class FormMain : Form, IMainView
     {
         private Model.Model model;
+        private Presenter.Presenter _presenter;
+
         public FormMain(string nombreEmpleado, string apellidoEmpleado, string cargoEmpleado)
         {
             InitializeComponent();
             lblUser.Text = "Nombre: " + nombreEmpleado + " " + apellidoEmpleado;
             lblCargo.Text = "Rol: " + cargoEmpleado;
+
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
             Utilities.BorderRadius(panelChild, 10);
             Utilities.BorderRadius(panelDatosUser, 10);
-
+            _presenter = new Presenter.Presenter(this);
         }
 
         public void ShowFormPanel(Form formulario)
@@ -44,58 +48,20 @@ namespace TimeTrack.View
         private Dictionary<string, Form> _OpenForms = new Dictionary<string, Form>();
         private void button1_Click(object sender, EventArgs e)
         {
-            // Verificar si ya hay una instancia del formulario FormLogin
-            Form existingForm = null;
-            if (_OpenForms.ContainsKey("FormLogin"))
-            {
-                existingForm = _OpenForms["FormLogin"];
-            }
-
-            if (existingForm != null)
-            {
-                // Si existe una instancia, mostrarla
-                ShowFormPanel(existingForm);
-            }
-            else
-            {
-                // Si no existe, crear una nueva instancia y mostrarla
-                FormLogin form1 = new FormLogin();
-                _OpenForms["FormLogin"] = form1;
-                ShowFormPanel(form1);
-            }
+            FormInOut form1 = new FormInOut();
+            _presenter.ShowOrOpenFormInPanel(form1, "FormInOut", panelChild);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Verificar si ya hay una instancia del formulario FormLogin
-            Form existingForm = null;
-            if (_OpenForms.ContainsKey("FormInOut"))
-            {
-                existingForm = _OpenForms["FormInOut"];
-            }
-
-            if (existingForm != null)
-            {
-                // Si existe una instancia, mostrarla
-                ShowFormPanel(existingForm);
-            }
-            else
-            {
-                // Si no existe, crear una nueva instancia y mostrarla
-                FormInOut form2 = new FormInOut();
-                _OpenForms["FormInOut"] = form2;
-                ShowFormPanel(form2);
-            }
+            FormNominaEmpleado form1 = new FormNominaEmpleado();
+            _presenter.ShowOrOpenFormInPanel(form1, "FormNominaEmpleado", panelChild);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            FormNominaEmpleado form1 = new FormNominaEmpleado();
+            _presenter.ShowOrOpenFormInPanel(form1, "FormNominaEmpleado", panelChild);
         }
     }
 }

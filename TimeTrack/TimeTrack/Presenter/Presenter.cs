@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using TimeTrack.View;
@@ -12,10 +13,22 @@ namespace TimeTrack.Presenter
         private readonly ModelManager _modelo;
         private readonly IMainView _mainVista;
 
+        private Dictionary<string, Form> _openForms = new Dictionary<string, Form>();
+
         public Presenter(ILoginView vista)
         {
             _vista = vista;
             _modelo = new ModelManager();
+        }
+
+        public Presenter() 
+        {
+
+        }
+
+        public Presenter(IMainView viewMain)
+        {
+            _mainVista = viewMain;
         }
 
         public void IniciarSesion()
@@ -55,6 +68,55 @@ namespace TimeTrack.Presenter
                 _vista.MostrarMensajeError(mensajeError);
                 // Opcionalmente, también puedes registrar la excepción para su posterior análisis o registro.
             }
+        }
+
+        public string ObtenerFechaActual()
+        {
+            DateTime fechaActual = DateTime.Now;
+            string fechaFormateada = fechaActual.ToString("dd/MM/yyyy");
+            return fechaFormateada;
+        }
+
+        public string ObtenerHoraActual()
+        {
+            DateTime horaActual = DateTime.Now;
+            string horaFormateada = horaActual.ToString("HH:mm:ss");
+            return horaFormateada;
+        }
+
+        public void ShowOrOpenFormInPanel(Form form, string formName, Panel panel)
+        {
+            foreach (Control control in panel.Controls)
+            {
+                if (control is Form existingForm && existingForm.Name != formName)
+                {
+                    existingForm.Hide();
+                }
+            }
+
+            if (!_openForms.ContainsKey(formName))
+            {
+                _openForms[formName] = form;
+                ShowFormInPanel(form, panel);
+            }
+            else
+            {
+                Form existingForm = _openForms[formName];
+                existingForm.Show();
+            }
+        }
+
+
+
+        private void ShowFormInPanel(Form form, Panel panel)
+        {
+            // Aquí pondrías la lógica para mostrar el formulario en el panel especificado
+            // Por ejemplo:
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel.Controls.Add(form);
+            form.Show();
         }
 
 

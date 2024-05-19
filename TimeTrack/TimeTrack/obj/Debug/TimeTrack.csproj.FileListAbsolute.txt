@@ -61,3 +61,6 @@ C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\Ti
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormInOut.resources
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormNomina.resources
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormNominaEmpleado.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormInOut.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormNomina.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormNominaEmpleado.resources
