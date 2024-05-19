@@ -41,18 +41,59 @@ namespace TimeTrack.View
             formulario.Show();
         }
 
+        private Dictionary<string, Form> _OpenForms = new Dictionary<string, Form>();
         private void button1_Click(object sender, EventArgs e)
         {
-            FormLogin form1 = new FormLogin();
-            ShowFormPanel(form1);
+            // Verificar si ya hay una instancia del formulario FormLogin
+            Form existingForm = null;
+            if (_OpenForms.ContainsKey("FormLogin"))
+            {
+                existingForm = _OpenForms["FormLogin"];
+            }
+
+            if (existingForm != null)
+            {
+                // Si existe una instancia, mostrarla
+                ShowFormPanel(existingForm);
+            }
+            else
+            {
+                // Si no existe, crear una nueva instancia y mostrarla
+                FormLogin form1 = new FormLogin();
+                _OpenForms["FormLogin"] = form1;
+                ShowFormPanel(form1);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Verificar si ya hay una instancia del formulario FormLogin
+            Form existingForm = null;
+            if (_OpenForms.ContainsKey("FormInOut"))
+            {
+                existingForm = _OpenForms["FormInOut"];
+            }
 
+            if (existingForm != null)
+            {
+                // Si existe una instancia, mostrarla
+                ShowFormPanel(existingForm);
+            }
+            else
+            {
+                // Si no existe, crear una nueva instancia y mostrarla
+                FormInOut form2 = new FormInOut();
+                _OpenForms["FormInOut"] = form2;
+                ShowFormPanel(form2);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

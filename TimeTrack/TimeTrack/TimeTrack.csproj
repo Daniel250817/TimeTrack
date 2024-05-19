@@ -78,11 +78,29 @@
     <Compile Include="Model\Model.cs" />
     <Compile Include="Presenter\ILoginPresenter.cs" />
     <Compile Include="Presenter\Presenter.cs" />
+    <Compile Include="View\FormInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormInOut.Designer.cs">
+      <DependentUpon>FormInOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNomina.Designer.cs">
+      <DependentUpon>FormNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormNominaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNominaEmpleado.Designer.cs">
+      <DependentUpon>FormNominaEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ILoginView.cs" />
     <Compile Include="View\IMainView.cs" />
@@ -105,8 +123,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\FormInOut.resx">
+      <DependentUpon>FormInOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNomina.resx">
+      <DependentUpon>FormNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNominaEmpleado.resx">
+      <DependentUpon>FormNominaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Registro de sesión.resx">
       <DependentUpon>Registro de sesión.cs</DependentUpon>
@@ -127,6 +154,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Recursos\prograbg.png" />
     <Content Include="Recursos\Salir.png" />
     <Content Include="Recursos\TimeTrackNobg.ico" />
     <Content Include="Recursos\TimeTrackNobg.png" />
