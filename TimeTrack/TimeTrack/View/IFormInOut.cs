@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeTrack.Model;
 
-namespace TimeTrack.Presenter
+namespace TimeTrack.View
 {
-    internal interface ILoginPresenter
+    internal interface IFormInOut
     {
-        void IniciarSesion();
+        void MostrarHorarioEmpleado(Horario horario);
     }
 }

@@ -36,9 +36,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnNominaAdmin = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnNomina = new System.Windows.Forms.Button();
+            this.btnDatosPerson = new System.Windows.Forms.Button();
+            this.btnJornada = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelChild = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -125,58 +128,100 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnNominaAdmin);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnNomina);
+            this.panel2.Controls.Add(this.btnDatosPerson);
+            this.panel2.Controls.Add(this.btnJornada);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 107);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(277, 430);
+            this.panel2.Size = new System.Drawing.Size(277, 688);
             this.panel2.TabIndex = 1;
             // 
-            // button3
+            // button5
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(15, 167);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(245, 31);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Nomina";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(15, 229);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(245, 40);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "📄";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnNominaAdmin
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(13, 121);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(245, 31);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Datos Personales";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnNominaAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNominaAdmin.Location = new System.Drawing.Point(16, 401);
+            this.btnNominaAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNominaAdmin.Name = "btnNominaAdmin";
+            this.btnNominaAdmin.Size = new System.Drawing.Size(245, 40);
+            this.btnNominaAdmin.TabIndex = 6;
+            this.btnNominaAdmin.Text = "📄Nomina Administrativa";
+            this.btnNominaAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNominaAdmin.UseVisualStyleBackColor = true;
+            this.btnNominaAdmin.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button1
+            // label3
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(15, 73);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 31);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Jornada Laboral";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(96, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 29);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "MENÚ";
+            // 
+            // btnNomina
+            // 
+            this.btnNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNomina.Location = new System.Drawing.Point(15, 179);
+            this.btnNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNomina.Name = "btnNomina";
+            this.btnNomina.Size = new System.Drawing.Size(245, 40);
+            this.btnNomina.TabIndex = 3;
+            this.btnNomina.Text = "📄Nomina";
+            this.btnNomina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNomina.UseVisualStyleBackColor = true;
+            this.btnNomina.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnDatosPerson
+            // 
+            this.btnDatosPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatosPerson.Location = new System.Drawing.Point(15, 126);
+            this.btnDatosPerson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDatosPerson.Name = "btnDatosPerson";
+            this.btnDatosPerson.Size = new System.Drawing.Size(245, 40);
+            this.btnDatosPerson.TabIndex = 2;
+            this.btnDatosPerson.Text = "👨‍Datos Personales";
+            this.btnDatosPerson.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDatosPerson.UseVisualStyleBackColor = true;
+            this.btnDatosPerson.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnJornada
+            // 
+            this.btnJornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJornada.Location = new System.Drawing.Point(15, 73);
+            this.btnJornada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJornada.Name = "btnJornada";
+            this.btnJornada.Size = new System.Drawing.Size(245, 40);
+            this.btnJornada.TabIndex = 1;
+            this.btnJornada.Text = "🕑Jornada Laboral";
+            this.btnJornada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnJornada.UseVisualStyleBackColor = true;
+            this.btnJornada.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(3, 386);
+            this.label2.Location = new System.Drawing.Point(3, 644);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 32);
             this.label2.TabIndex = 0;
@@ -191,7 +236,7 @@
             this.panelChild.Location = new System.Drawing.Point(307, 138);
             this.panelChild.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(688, 370);
+            this.panelChild.Size = new System.Drawing.Size(688, 628);
             this.panelChild.TabIndex = 2;
             // 
             // FormMain
@@ -199,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1023, 538);
+            this.ClientSize = new System.Drawing.Size(1023, 796);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -229,11 +274,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelChild;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnJornada;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNomina;
+        private System.Windows.Forms.Button btnDatosPerson;
         private System.Windows.Forms.Panel panelDatosUser;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnNominaAdmin;
+        private System.Windows.Forms.Button button5;
     }
 }

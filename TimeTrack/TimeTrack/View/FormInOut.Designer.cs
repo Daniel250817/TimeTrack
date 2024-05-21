@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInOut));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLunesViernes = new System.Windows.Forms.Label();
             this.panelHora = new System.Windows.Forms.Panel();
             this.panelDateHour = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHour = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSabado = new System.Windows.Forms.Label();
             this.btnIn = new System.Windows.Forms.Button();
             this.panelInOut = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,25 +48,25 @@
             this.panelHour.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblLunesViernes
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 158);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 110);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Horario del empleado Lunes a viernes:\r\n\r\nEntrada: 7:00 am\r\n\r\nSalida: 5:00 pm";
+            this.lblLunesViernes.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblLunesViernes.AutoSize = true;
+            this.lblLunesViernes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLunesViernes.Location = new System.Drawing.Point(13, 158);
+            this.lblLunesViernes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLunesViernes.Name = "lblLunesViernes";
+            this.lblLunesViernes.Size = new System.Drawing.Size(318, 110);
+            this.lblLunesViernes.TabIndex = 0;
+            this.lblLunesViernes.Text = "Horario del empleado Lunes a viernes:\r\n\r\nEntrada: 7:00 am\r\n\r\nSalida: 5:00 pm";
             // 
             // panelHora
             // 
             this.panelHora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelHora.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelHora.Controls.Add(this.label1);
+            this.panelHora.Controls.Add(this.lblLunesViernes);
             this.panelHora.Controls.Add(this.panelDateHour);
-            this.panelHora.Controls.Add(this.label4);
+            this.panelHora.Controls.Add(this.lblSabado);
             this.panelHora.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelHora.Location = new System.Drawing.Point(29, 67);
             this.panelHora.Margin = new System.Windows.Forms.Padding(4);
@@ -106,22 +106,23 @@
             this.lblHour.TabIndex = 0;
             this.lblHour.Text = "Hora Actual:";
             // 
-            // label4
+            // lblSabado
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 307);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(250, 110);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Horario del empleado sábado:\r\n\r\nEntrada: 8:00 am\r\n\r\nSalida: 12:00 pm\r\n";
+            this.lblSabado.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSabado.AutoSize = true;
+            this.lblSabado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSabado.Location = new System.Drawing.Point(13, 307);
+            this.lblSabado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSabado.Name = "lblSabado";
+            this.lblSabado.Size = new System.Drawing.Size(250, 110);
+            this.lblSabado.TabIndex = 1;
+            this.lblSabado.Text = "Horario del empleado sábado:\r\n\r\nEntrada: 8:00 am\r\n\r\nSalida: 12:00 pm\r\n";
             // 
             // btnIn
             // 
             this.btnIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(60)))), ((int)(((byte)(190)))));
             this.btnIn.Location = new System.Drawing.Point(50, 89);
             this.btnIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnIn.Name = "btnIn";
@@ -173,6 +174,7 @@
             // 
             this.btnOut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(60)))), ((int)(((byte)(190)))));
             this.btnOut.Location = new System.Drawing.Point(223, 89);
             this.btnOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnOut.Name = "btnOut";
@@ -231,12 +233,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLunesViernes;
         private System.Windows.Forms.Panel panelHora;
         private System.Windows.Forms.Label lblHour;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnIn;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSabado;
         private System.Windows.Forms.Panel panelInOut;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelDateHour;

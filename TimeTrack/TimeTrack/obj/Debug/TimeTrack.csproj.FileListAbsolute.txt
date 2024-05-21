@@ -1,33 +1,3 @@
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.exe.config
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.exe
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.pdb
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.AssemblyReference.cache
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.Properties.Resources.resources
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.GenerateResource.cache
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.CoreCompileInputs.cache
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.exe
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.pdb
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Configuration.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Buffers.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Configuration.ConfigurationManager.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Memory.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.ValueTuple.dll
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Configuration.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Buffers.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Configuration.ConfigurationManager.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Memory.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.ValueTuple.xml
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.Up2Date
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.FormLogin.resources
-C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.Formmain.resources
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.exe.config
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.exe
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.pdb
@@ -61,6 +31,38 @@ C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\Ti
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormInOut.resources
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormNomina.resources
 C:\Users\wilal\Desktop\UFG\Ciclo 5\progra\tareas\unidad 4\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormNominaEmpleado.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.exe.config
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.exe
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\TimeTrack.pdb
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Buffers.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Memory.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.ValueTuple.dll
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Buffers.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Memory.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\bin\Debug\System.ValueTuple.xml
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.AssemblyReference.cache
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.Properties.Resources.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormJornadaAdmin.resources
 C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormInOut.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormJornada.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormMain.resources
 C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormNomina.resources
 C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.View.FormNominaEmpleado.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.FormLogin.resources
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.GenerateResource.cache
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.CoreCompileInputs.cache
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.csproj.Up2Date
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.exe
+C:\Users\julio\Documents\TimeTrack\TimeTrack\TimeTrack\obj\Debug\TimeTrack.pdb

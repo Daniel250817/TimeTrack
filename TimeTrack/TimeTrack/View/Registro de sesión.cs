@@ -66,20 +66,23 @@ namespace TimeTrack
 
         private void lblPassEye_Click(object sender, EventArgs e)
         {
-            // Si mostrarPassword es false, mostramos el texto en claro
             if (!mostrarPassword)
             {
-                txtPass.UseSystemPasswordChar = false; // Mostrar texto en claro
-                txtPass.Text = txtPass.Text; // Actualizar el texto (no es necesario, pero para asegurarse)
+                txtPass.UseSystemPasswordChar = false;
+                txtPass.Text = txtPass.Text; 
                 mostrarPassword = true;
             }
-            // Si mostrarPassword es true, mostramos el texto oculto
             else
             {
-                txtPass.UseSystemPasswordChar = true; // Ocultar texto con asteriscos
-                txtPass.Text = txtPass.Text; // Actualizar el texto (no es necesario, pero para asegurarse)
+                txtPass.UseSystemPasswordChar = true;
+                txtPass.Text = txtPass.Text;
                 mostrarPassword = false;
             }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

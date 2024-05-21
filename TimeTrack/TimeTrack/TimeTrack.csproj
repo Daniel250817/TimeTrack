@@ -76,13 +76,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Model.cs" />
-    <Compile Include="Presenter\ILoginPresenter.cs" />
     <Compile Include="Presenter\Presenter.cs" />
+    <Compile Include="View\FormJornadaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormJornadaAdmin.Designer.cs">
+      <DependentUpon>FormJornadaAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormInOut.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormInOut.Designer.cs">
       <DependentUpon>FormInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormJornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormJornada.Designer.cs">
+      <DependentUpon>FormJornada.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
@@ -102,8 +113,10 @@
     <Compile Include="View\FormNominaEmpleado.Designer.cs">
       <DependentUpon>FormNominaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\IFormInOut.cs" />
     <Compile Include="View\ILoginView.cs" />
     <Compile Include="View\IMainView.cs" />
+    <Compile Include="View\INomina.cs" />
     <Compile Include="View\Registro de sesión.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,8 +136,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\FormJornadaAdmin.resx">
+      <DependentUpon>FormJornadaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormInOut.resx">
       <DependentUpon>FormInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormJornada.resx">
+      <DependentUpon>FormJornada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

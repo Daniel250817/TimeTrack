@@ -1,6 +1,6 @@
 ﻿namespace TimeTrack.View
 {
-    partial class FormNominaEmpleado
+    partial class FormJornada
     {
         /// <summary>
         /// Required designer variable.
@@ -32,10 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.lblDetails = new System.Windows.Forms.Label();
-            this.dgvNominaEmployee = new System.Windows.Forms.DataGridView();
+            this.dgvNominaAdmin = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.PanelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -44,11 +44,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.PanelTop);
-            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 140);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(774, 140);
+            this.panel1.TabIndex = 4;
             // 
             // PanelTop
             // 
@@ -59,7 +59,7 @@
             this.PanelTop.Location = new System.Drawing.Point(26, 36);
             this.PanelTop.Margin = new System.Windows.Forms.Padding(4);
             this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(980, 71);
+            this.PanelTop.Size = new System.Drawing.Size(719, 71);
             this.PanelTop.TabIndex = 1;
             // 
             // lblDetails
@@ -69,23 +69,22 @@
             this.lblDetails.Location = new System.Drawing.Point(16, 25);
             this.lblDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(366, 22);
+            this.lblDetails.Size = new System.Drawing.Size(445, 22);
             this.lblDetails.TabIndex = 0;
-            this.lblDetails.Text = "El siguiente recuadro pertenece a su nomina";
+            this.lblDetails.Text = "El siguiente recuadro pertenece a sus jornadas laboral\r\n";
             // 
-            // dgvNominaEmployee
+            // dgvNominaAdmin
             // 
-            this.dgvNominaEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvNominaAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvNominaEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvNominaEmployee.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvNominaEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNominaEmployee.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvNominaEmployee.Location = new System.Drawing.Point(16, 172);
-            this.dgvNominaEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvNominaEmployee.Name = "dgvNominaEmployee";
-            this.dgvNominaEmployee.ReadOnly = true;
+            this.dgvNominaAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNominaAdmin.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvNominaAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNominaAdmin.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvNominaAdmin.Location = new System.Drawing.Point(13, 174);
+            this.dgvNominaAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvNominaAdmin.Name = "dgvNominaAdmin";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,37 +92,34 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNominaEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvNominaEmployee.RowHeadersWidth = 51;
-            this.dgvNominaEmployee.Size = new System.Drawing.Size(1035, 367);
-            this.dgvNominaEmployee.TabIndex = 2;
-            this.dgvNominaEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNominaAdmin_CellContentClick);
-            this.dgvNominaEmployee.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNominaAdmin_CellFormatting);
+            this.dgvNominaAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNominaAdmin.RowHeadersWidth = 51;
+            this.dgvNominaAdmin.Size = new System.Drawing.Size(774, 263);
+            this.dgvNominaAdmin.TabIndex = 5;
             // 
-            // FormNominaEmpleado
+            // FormJornada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.dgvNominaEmployee);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvNominaAdmin);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormNominaEmpleado";
-            this.Text = "FormNominaEmpleado";
-            this.Load += new System.EventHandler(this.FormNominaEmpleado_Load);
+            this.Name = "FormJornada";
+            this.Text = "FormJornada";
             this.panel1.ResumeLayout(false);
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblDetails;
         private System.Windows.Forms.Panel PanelTop;
-        private System.Windows.Forms.DataGridView dgvNominaEmployee;
+        private System.Windows.Forms.Label lblDetails;
+        private System.Windows.Forms.DataGridView dgvNominaAdmin;
     }
 }
