@@ -19,7 +19,7 @@ namespace TimeTrack.Model
         public decimal montoHrsDescuento { get; set; }
         public decimal salarioNeto { get; set; }
     }
-    public class Empleado 
+    public class DatosSesion 
     {
          public int idempleado { get; set; }
          public string nombre { get; set; }
@@ -31,8 +31,6 @@ namespace TimeTrack.Model
     {
          public string NombreUsuario { get; set; }
          public string Contrasena { get; set; }
-
-
     }
 
     public class Horario
@@ -211,6 +209,7 @@ namespace TimeTrack.Model
             }
         }
 
+        /*---------Empleados---------*/
 
 
 
@@ -229,9 +228,11 @@ namespace TimeTrack.Model
 
 
 
-        public static Empleado ObtenerDatosEmpleadoLogueado(string nombreUsuario)
+
+
+        public static DatosSesion ObtenerDatosEmpleadoLogueado(string nombreUsuario)
         {
-            Empleado empleado = new Empleado();
+            DatosSesion sesion = new DatosSesion();
 
             // Obtener la cadena de conexión desde app.config
             string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
@@ -258,15 +259,15 @@ namespace TimeTrack.Model
                         if (reader.Read())
                         {
                             // Asignar los valores leídos a las propiedades del objeto Empleado
-                            empleado.idempleado = reader.GetInt32(reader.GetOrdinal("id_empleado"));
-                            empleado.nombre = reader.GetString(reader.GetOrdinal("nombres"));
-                            empleado.apellido = reader.GetString(reader.GetOrdinal("apellidos"));
-                            empleado.cargo = reader.GetString(reader.GetOrdinal("cargo"));
+                            sesion.idempleado = reader.GetInt32(reader.GetOrdinal("id_empleado"));
+                            sesion.nombre = reader.GetString(reader.GetOrdinal("nombres"));
+                            sesion.apellido = reader.GetString(reader.GetOrdinal("apellidos"));
+                            sesion.cargo = reader.GetString(reader.GetOrdinal("cargo"));
                         }
                     }
                 }
             }
-            return empleado;
+            return sesion;
         }
 
         public Horario ObtenerHorarioEmpleado(int idEmpleado)

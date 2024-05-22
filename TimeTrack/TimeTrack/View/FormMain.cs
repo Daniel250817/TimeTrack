@@ -39,6 +39,11 @@ namespace TimeTrack.View
             Utilities.BorderRadius(panelChild, 10);
             Utilities.BorderRadius(panelDatosUser, 10);
             _presenter = new Presenter.Presenter();
+            panel2.AutoScroll = true;
+            panel2.HorizontalScroll.Visible = false;
+            panel2.VerticalScroll.Visible = false;
+            panel2.SetAutoScrollMargin(0, 100);
+            
         }
 
         private Dictionary<string, Form> _OpenForms = new Dictionary<string, Form>();
@@ -50,7 +55,8 @@ namespace TimeTrack.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            FormDetalleEmpleado form1 = new FormDetalleEmpleado();
+            _presenter.ShowOrOpenFormInPanel(form1, "FormDetalleEmpleado", panelChild);
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -150,14 +150,14 @@ namespace TimeTrack.Presenter
 
                 if (_modeloManager.VerificarCredenciales(nombreUsuario, contrasena))
                 {
-                    Empleado empleado = ObtenerDatosEmpleadoLogueado(nombreUsuario);
+                    DatosSesion sesion = ObtenerDatosEmpleadoLogueado(nombreUsuario);
 
-                    if (empleado != null)
+                    if (sesion != null)
                     {
-                        int idLogueado = empleado.idempleado;
-                        string nombreEmpleado = empleado.nombre;
-                        string apellidoEmpleado = empleado.apellido;
-                        string cargoEmpleado = empleado.cargo;
+                        int idLogueado = sesion.idempleado;
+                        string nombreEmpleado = sesion.nombre;
+                        string apellidoEmpleado = sesion.apellido;
+                        string cargoEmpleado = sesion.cargo;
 
                         FormMain formMain = new FormMain(idLogueado, nombreEmpleado, apellidoEmpleado, cargoEmpleado);
 

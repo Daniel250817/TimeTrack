@@ -53,7 +53,7 @@
             this.lblLunesViernes.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblLunesViernes.AutoSize = true;
             this.lblLunesViernes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLunesViernes.Location = new System.Drawing.Point(13, 158);
+            this.lblLunesViernes.Location = new System.Drawing.Point(13, 150);
             this.lblLunesViernes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLunesViernes.Name = "lblLunesViernes";
             this.lblLunesViernes.Size = new System.Drawing.Size(318, 110);
@@ -111,7 +111,7 @@
             this.lblSabado.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSabado.AutoSize = true;
             this.lblSabado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSabado.Location = new System.Drawing.Point(13, 307);
+            this.lblSabado.Location = new System.Drawing.Point(13, 320);
             this.lblSabado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSabado.Name = "lblSabado";
             this.lblSabado.Size = new System.Drawing.Size(250, 110);
@@ -215,6 +215,7 @@
             this.Controls.Add(this.panelInOut);
             this.Controls.Add(this.panelHora);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormInOut";
             this.Text = "FormInOut";

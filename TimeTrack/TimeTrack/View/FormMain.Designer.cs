@@ -61,7 +61,7 @@
             this.panel1.Location = new System.Drawing.Point(-3, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1027, 110);
+            this.panel1.Size = new System.Drawing.Size(1486, 110);
             this.panel1.TabIndex = 0;
             // 
             // panelDatosUser
@@ -74,7 +74,7 @@
             this.panelDatosUser.Location = new System.Drawing.Point(310, 18);
             this.panelDatosUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDatosUser.Name = "panelDatosUser";
-            this.panelDatosUser.Size = new System.Drawing.Size(688, 75);
+            this.panelDatosUser.Size = new System.Drawing.Size(1147, 75);
             this.panelDatosUser.TabIndex = 4;
             // 
             // lblUser
@@ -82,7 +82,7 @@
             this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(151, 12);
+            this.lblUser.Location = new System.Drawing.Point(610, 12);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(525, 18);
             this.lblUser.TabIndex = 2;
@@ -94,7 +94,7 @@
             this.lblCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCargo.Location = new System.Drawing.Point(131, 46);
+            this.lblCargo.Location = new System.Drawing.Point(590, 46);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(545, 29);
             this.lblCargo.TabIndex = 3;
@@ -127,6 +127,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.btnNominaAdmin);
@@ -138,16 +139,16 @@
             this.panel2.Location = new System.Drawing.Point(0, 107);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(277, 688);
+            this.panel2.Size = new System.Drawing.Size(295, 688);
             this.panel2.TabIndex = 1;
             // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(15, 229);
+            this.button5.Location = new System.Drawing.Point(12, 230);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(245, 40);
+            this.button5.Size = new System.Drawing.Size(270, 40);
             this.button5.TabIndex = 7;
             this.button5.Text = "📄";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,10 +157,10 @@
             // btnNominaAdmin
             // 
             this.btnNominaAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNominaAdmin.Location = new System.Drawing.Point(16, 401);
+            this.btnNominaAdmin.Location = new System.Drawing.Point(12, 363);
             this.btnNominaAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNominaAdmin.Name = "btnNominaAdmin";
-            this.btnNominaAdmin.Size = new System.Drawing.Size(245, 40);
+            this.btnNominaAdmin.Size = new System.Drawing.Size(270, 40);
             this.btnNominaAdmin.TabIndex = 6;
             this.btnNominaAdmin.Text = "📄Nomina Administrativa";
             this.btnNominaAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,10 +181,10 @@
             // btnNomina
             // 
             this.btnNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNomina.Location = new System.Drawing.Point(15, 179);
+            this.btnNomina.Location = new System.Drawing.Point(12, 180);
             this.btnNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNomina.Name = "btnNomina";
-            this.btnNomina.Size = new System.Drawing.Size(245, 40);
+            this.btnNomina.Size = new System.Drawing.Size(270, 40);
             this.btnNomina.TabIndex = 3;
             this.btnNomina.Text = "📄Nomina";
             this.btnNomina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,10 +194,10 @@
             // btnDatosPerson
             // 
             this.btnDatosPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatosPerson.Location = new System.Drawing.Point(15, 126);
+            this.btnDatosPerson.Location = new System.Drawing.Point(12, 127);
             this.btnDatosPerson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDatosPerson.Name = "btnDatosPerson";
-            this.btnDatosPerson.Size = new System.Drawing.Size(245, 40);
+            this.btnDatosPerson.Size = new System.Drawing.Size(270, 40);
             this.btnDatosPerson.TabIndex = 2;
             this.btnDatosPerson.Text = "👨‍Datos Personales";
             this.btnDatosPerson.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,10 +207,10 @@
             // btnJornada
             // 
             this.btnJornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJornada.Location = new System.Drawing.Point(15, 73);
+            this.btnJornada.Location = new System.Drawing.Point(12, 74);
             this.btnJornada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJornada.Name = "btnJornada";
-            this.btnJornada.Size = new System.Drawing.Size(245, 40);
+            this.btnJornada.Size = new System.Drawing.Size(270, 40);
             this.btnJornada.TabIndex = 1;
             this.btnJornada.Text = "🕑Jornada Laboral";
             this.btnJornada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,10 +234,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChild.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelChild.Location = new System.Drawing.Point(307, 138);
+            this.panelChild.Location = new System.Drawing.Point(315, 128);
             this.panelChild.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(688, 628);
+            this.panelChild.Size = new System.Drawing.Size(1147, 652);
             this.panelChild.TabIndex = 2;
             // 
             // FormMain
@@ -244,13 +245,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1023, 796);
+            this.ClientSize = new System.Drawing.Size(1482, 796);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1038, 575);
+            this.MinimumSize = new System.Drawing.Size(1400, 590);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";

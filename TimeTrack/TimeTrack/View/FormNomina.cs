@@ -59,7 +59,7 @@ namespace TimeTrack.View
 
                 // Obtener los valores de la fila seleccionada y cargarlos en los ComboBoxes
                 // Asumiendo que los ComboBoxes se llaman cmbIdEmpleado, cmbFecha, cmbDescuento, cmbSalarioBase, cmbMontoHrsExtra, cmbMontoHrsDescuento y cmbSalarioNeto
-                txtIdNomina.Text = filaSeleccionada.Cells["idEmpleado"].Value.ToString();
+                txtIdNomina.Text = filaSeleccionada.Cells["idNomina"].Value.ToString();
                 txtIdEmpleado.Text = filaSeleccionada.Cells["idEmpleado"].Value.ToString();
                 txtFecha.Text = filaSeleccionada.Cells["fecha"].Value.ToString();
                 txtDescuento.Text = filaSeleccionada.Cells["descuento"].Value.ToString();

@@ -50,8 +50,8 @@ namespace TimeTrack.View
         public void MostrarHorarioEmpleado(Horario horario)
         {
             // Mostrar los valores del horario en las etiquetas correspondientes
-            lblLunesViernes.Text = $"Horario: \n{horario.nombreHorario}\n\nLunes a Viernes: Entrada {horario.entradaLunesViernes}\nSalida {horario.salidaLunesViernes}";
-            lblSabado.Text = $"Sábado: Entrada {horario.entradaSabado} \nSalida  {horario.salidaSabado}";
+            lblLunesViernes.Text = $"Horario: \n{horario.nombreHorario}\n\nLunes a Viernes: \n\nEntrada {horario.entradaLunesViernes}\nSalida {horario.salidaLunesViernes}";
+            lblSabado.Text = $"Sábado: \n\nEntrada {horario.entradaSabado} \nSalida  {horario.salidaSabado}";
         }
 
     }
