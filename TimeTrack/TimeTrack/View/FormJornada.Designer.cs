@@ -43,6 +43,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.panel1.BackgroundImage = global::TimeTrack.Properties.Resources.Imagen_fondo;
             this.panel1.Controls.Add(this.PanelTop);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);

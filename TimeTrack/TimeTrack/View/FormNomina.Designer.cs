@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNominaAdmin = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,8 +50,8 @@
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.txtIdNomina = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtIdNomina = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,14 +70,15 @@
             this.dgvNominaAdmin.Location = new System.Drawing.Point(16, 290);
             this.dgvNominaAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNominaAdmin.Name = "dgvNominaAdmin";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNominaAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvNominaAdmin.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNominaAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNominaAdmin.RowHeadersWidth = 51;
             this.dgvNominaAdmin.Size = new System.Drawing.Size(1035, 249);
             this.dgvNominaAdmin.TabIndex = 0;
@@ -129,10 +130,11 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(45, 23);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(100, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
@@ -141,10 +143,11 @@
             // btnActu
             // 
             this.btnActu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActu.Location = new System.Drawing.Point(45, 87);
             this.btnActu.Margin = new System.Windows.Forms.Padding(4);
             this.btnActu.Name = "btnActu";
-            this.btnActu.Size = new System.Drawing.Size(100, 28);
+            this.btnActu.Size = new System.Drawing.Size(100, 34);
             this.btnActu.TabIndex = 1;
             this.btnActu.Text = "Modificar";
             this.btnActu.UseVisualStyleBackColor = true;
@@ -153,10 +156,11 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(45, 147);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(100, 34);
             this.button3.TabIndex = 1;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
@@ -342,16 +346,6 @@
             this.panelTop.Size = new System.Drawing.Size(852, 65);
             this.panelTop.TabIndex = 2;
             // 
-            // txtIdNomina
-            // 
-            this.txtIdNomina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIdNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdNomina.Location = new System.Drawing.Point(843, 3);
-            this.txtIdNomina.Name = "txtIdNomina";
-            this.txtIdNomina.Size = new System.Drawing.Size(10, 28);
-            this.txtIdNomina.TabIndex = 16;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -362,6 +356,16 @@
             this.label1.Size = new System.Drawing.Size(186, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nomina administrativa";
+            // 
+            // txtIdNomina
+            // 
+            this.txtIdNomina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtIdNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdNomina.Location = new System.Drawing.Point(843, 3);
+            this.txtIdNomina.Name = "txtIdNomina";
+            this.txtIdNomina.Size = new System.Drawing.Size(10, 28);
+            this.txtIdNomina.TabIndex = 16;
             // 
             // FormNomina
             // 

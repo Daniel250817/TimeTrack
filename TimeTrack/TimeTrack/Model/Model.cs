@@ -7,8 +7,6 @@ using System.Windows.Forms;
 
 namespace TimeTrack.Model
 {
-    
-
     public class Nomina
     {
         public int idNomina { get; set; }
@@ -30,8 +28,9 @@ namespace TimeTrack.Model
     }
     public class Usuario
     {
-         public string NombreUsuario { get; set; }
-         public string Contrasena { get; set; }
+        public string NombreUsuario { get; set; }
+        public string Contrasena { get; set; }
+        public int idEmpleado { get; set; }
     }
 
     public class Horario
@@ -171,7 +170,7 @@ namespace TimeTrack.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al insertar la nómina: " + ex.Message);
+                MessageBox.Show("Error al insertar la nómina: " + ex.Message);
                 return false;
             }
         }
@@ -207,7 +206,7 @@ namespace TimeTrack.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al insertar la nómina: " + ex.Message);
+                MessageBox.Show("Error al insertar la nómina: " + ex.Message);
                 return false;
             }
             
@@ -280,19 +279,94 @@ namespace TimeTrack.Model
             return horarioRegistro;
         }
 
+        public bool InsertarHorario(RegistroHorario horario)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
 
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "INSERT INTO empleado_horario (id_empleado, id_horario, fecha_inicio, fecha_fin) " +
+                                      "VALUES (@IdEmpleado, @IdHorario, @FechaInicio, @FechaFin)";
 
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdEmpleado", horario.idEmpleado);
+                        comando.Parameters.AddWithValue("@IdHorario", horario.idHorario);
+                        comando.Parameters.AddWithValue("@FechaInicio", horario.fechaInicio);
+                        comando.Parameters.AddWithValue("@FechaFin", horario.fechaFin);
 
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el horario: " + ex.Message);
+                return false;
+            }
+        }
 
+        public bool ActualizarHorario(RegistroHorario horario)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
 
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "UPDATE empleado_horario SET id_empleado = @IdEmpleado, id_horario = @IdHorario, fecha_inicio = @FechaInicio, fecha_fin = @FechaFin " +
+                                      "WHERE id_empleado_horario = @IdHorarioEmpleado";
 
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdHorarioEmpleado", horario.idHorarioEmpleado);
+                        comando.Parameters.AddWithValue("@IdEmpleado", horario.idEmpleado);
+                        comando.Parameters.AddWithValue("@IdHorario", horario.idHorario);
+                        comando.Parameters.AddWithValue("@FechaInicio", horario.fechaInicio);
+                        comando.Parameters.AddWithValue("@FechaFin", horario.fechaFin);
 
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar el horario: " + ex.Message);
+                return false;
+            }
+        }
 
+        public static bool EliminarHorario(int idHorarioEmpleado)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
 
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "DELETE FROM empleado_horario WHERE id_empleado_horario = @IdHorarioEmpleado";
 
-
-
-
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdHorarioEmpleado", idHorarioEmpleado);
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el horario: " + ex.Message);
+                return false;
+            }
+        }
 
 
 
@@ -421,7 +495,7 @@ namespace TimeTrack.Model
                 catch (Exception ex)
                 {
                     // Manejar cualquier excepción que pueda ocurrir
-                    Console.WriteLine("Error al verificar las credenciales: " + ex.Message);
+                    MessageBox.Show("Error al verificar las credenciales: " + ex.Message);
                     return false;
                 }
             }

@@ -66,85 +66,17 @@ namespace TimeTrack.Presenter
 
         /*------Validaciones de campos-------*/
 
-        public bool ValidarIdEmpleado(string idEmpleado)
-        {
-            if (string.IsNullOrWhiteSpace(idEmpleado) || !int.TryParse(idEmpleado, out int id) || id < 0)
-            {
-                _vistaNomina.MostrarMensaje("El campo 'ID Empleado' es inválido o negativo.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
-        }
 
-        public bool ValidarFecha(string fecha)
-        {
-            if (string.IsNullOrWhiteSpace(fecha) || !DateTime.TryParse(fecha, out _))
-            {
-                _vistaNomina.MostrarMensaje("El campo 'Fecha' es inválido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
-        }
-
-        public bool ValidarDescuento(string descuento)
-        {
-            if (string.IsNullOrWhiteSpace(descuento) || !decimal.TryParse(descuento, out _))
-            {
-                _vistaNomina.MostrarMensaje("El campo 'Descuento' es inválido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
-        }
-
-        public bool ValidarSalarioBase(string salarioBase)
-        {
-            if (string.IsNullOrWhiteSpace(salarioBase) || !decimal.TryParse(salarioBase, out _))
-            {
-                _vistaNomina.MostrarMensaje("El campo 'Salario Base' es inválido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
-        }
-
-        public bool ValidarMontoHorasExtra(string montoHrsExtra)
-        {
-            if (string.IsNullOrWhiteSpace(montoHrsExtra) || !decimal.TryParse(montoHrsExtra, out _))
-            {
-                _vistaNomina.MostrarMensaje("El campo 'Monto Horas Extra' es inválido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
-        }
-
-        public bool ValidarMontoHorasDescuento(string montoHrsDescuento)
-        {
-            if (string.IsNullOrWhiteSpace(montoHrsDescuento) || !decimal.TryParse(montoHrsDescuento, out _))
-            {
-                _vistaNomina.MostrarMensaje("El campo 'Monto Horas Descuento' es inválido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
-        }
-
-        public bool ValidarSalarioNeto(string salarioNeto)
-        {
-            if (string.IsNullOrWhiteSpace(salarioNeto) || !decimal.TryParse(salarioNeto, out _))
-            {
-                _vistaNomina.MostrarMensaje("El campo 'Salario Neto' es inválido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
-        }
 
         public bool ValidarCamposNomina(string idEmpleado, string fecha, string descuento, string salarioBase, string montoHrsExtra, string montoHrsDescuento, string salarioNeto)
         {
-            bool idEmpleadoValido = ValidarIdEmpleado(idEmpleado);
-            bool fechaValida = ValidarFecha(fecha);
-            bool descuentoValido = ValidarDescuento(descuento);
-            bool salarioBaseValido = ValidarSalarioBase(salarioBase);
-            bool montoHrsExtraValido = ValidarMontoHorasExtra(montoHrsExtra);
-            bool montoHrsDescuentoValido = ValidarMontoHorasDescuento(montoHrsDescuento);
-            bool salarioNetoValido = ValidarSalarioNeto(salarioNeto);
+            bool idEmpleadoValido = Validaciones.ValidarId(idEmpleado, mensaje => _vistaNomina.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            bool fechaValida = Validaciones.ValidarFecha(fecha, mensaje => _vistaNomina.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            bool descuentoValido = Validaciones.ValidarDecimal(descuento, mensaje => _vistaNomina.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Descuento");
+            bool salarioBaseValido = Validaciones.ValidarDecimal(salarioBase, mensaje => _vistaNomina.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Salario Base");
+            bool montoHrsExtraValido = Validaciones.ValidarDecimal(montoHrsExtra, mensaje => _vistaNomina.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Monto Horas Extra");
+            bool montoHrsDescuentoValido = Validaciones.ValidarDecimal(montoHrsDescuento, mensaje => _vistaNomina.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Monto Horas Descuento");
+            bool salarioNetoValido = Validaciones.ValidarDecimal(salarioNeto, mensaje => _vistaNomina.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Salario Neto");
 
             return idEmpleadoValido && fechaValida && descuentoValido && salarioBaseValido && montoHrsExtraValido && montoHrsDescuentoValido && salarioNetoValido;
         }
@@ -365,9 +297,61 @@ namespace TimeTrack.Presenter
 
             foreach (var horarios in horarioRegistro)
             {
-                dataGridView.Rows.Add(horarios.idHorarioEmpleado, horarios.idHorario, horarios.idEmpleado, horarios.fechaInicio, horarios.fechaFin);
+                dataGridView.Rows.Add(horarios.idHorarioEmpleado, horarios.idEmpleado, horarios.idHorario,  horarios.fechaInicio, horarios.fechaFin);
             }
         }
+
+
+        public void InsertarRegistroHorario(RegistroHorario horario)
+        {
+            bool resultado = _model.InsertarHorario(horario);
+            if (resultado)
+            {
+                _horarioRegistro.MostrarMensaje("¡La horario se ha insertado correctamente!", "Inserción del dato éxitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarHorariosEmpleados();
+            }
+            else
+            {
+                _vistaNomina.MostrarMensaje("¡Error al insertar el horario!", "Error al Insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void ActualizarRegistroHorarios(RegistroHorario horario)
+        {
+            bool result = _model.ActualizarHorario(horario); // Llama al método correspondiente en tu modelo
+            if (result)
+            {
+                _horarioRegistro.MostrarMensaje("¡La nómina se ha actualizado correctamente!", "Actualización Éxitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarHorariosEmpleados();
+            }
+            else
+            {
+                _horarioRegistro.MostrarMensaje("¡Error al Actualizar el horario!", "Error al Insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public void EliminarRegistroHorario(int idHorarioEmpleado)
+        {
+            EliminarHorario(idHorarioEmpleado);
+            _horarioRegistro.MostrarMensaje("¡El horario se ha eliminado correctamente!", "Eliminación Éxitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MostrarHorariosEmpleados();
+        }
+
+        public bool ValidarCamposHorario(string idEmpleado, string idHorario, string fechaInicio, string fechaFin)
+        {
+            string mensajeError = Validaciones.ValidarFechas(fechaInicio, fechaFin);
+            if (mensajeError != null)
+            {
+                _horarioRegistro.MostrarMensaje(mensajeError, "Error de fechas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            bool idEmpleadoValido = Validaciones.ValidarId(idEmpleado, mensaje => _horarioRegistro.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            bool idHorarioValido = Validaciones.ValidarId(idHorario, mensaje => _horarioRegistro.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
+
+            return idEmpleadoValido && idHorarioValido && idHorarioValido;
+        }
+
 
         private void MostrarHorariosEmpleados()
         {
