@@ -85,12 +85,6 @@ namespace TimeTrack.View
             }
         }
 
-
-        public void MostrarMensaje(string mensaje)
-        {
-            MessageBox.Show(mensaje);
-        }
-
         public void MostrarMensaje(string mensaje, string titulo, MessageBoxButtons botones, MessageBoxIcon icono)
         {
             MessageBox.Show(this, mensaje, titulo, botones, icono);

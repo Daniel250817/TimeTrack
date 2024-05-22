@@ -20,6 +20,7 @@ namespace TimeTrack.Presenter
         private readonly ILoginView _Loginvista;
         private INomina _vistaNomina;
         private IFormInOut _view;
+        private IHorarioRegistro _horarioRegistro;
 
 
         public IMainView _mainView { get; set; }
@@ -33,9 +34,9 @@ namespace TimeTrack.Presenter
             _model = new Model.Model();
         }
 
-        public Presenter(ILoginView vista) : this() // Llama al constructor por defecto
+        public Presenter(ILoginView vistaLogin) : this() // Llama al constructor por defecto
         {
-            _Loginvista = vista;
+            _Loginvista = vistaLogin;
         }
 
         public Presenter(INomina vista) : this() // Llama al constructor por defecto
@@ -49,6 +50,13 @@ namespace TimeTrack.Presenter
             _view = view;
             _model = new Model.Model();
         }
+
+        public Presenter(IHorarioRegistro vistaHorario) : this() // Llama al constructor por defecto
+        {
+            _horarioRegistro = vistaHorario;
+        }
+
+
 
         public void SetMainView(IMainView mainView)
         {
@@ -299,9 +307,17 @@ namespace TimeTrack.Presenter
 
         public void ActualizarNominaDGV(Nomina nomina)
         {
-            ActualizarNomina(nomina); // Llama al método correspondiente en tu modelo
-            _vistaNomina.MostrarMensaje("¡La nómina se ha actualizado correctamente!", "Actualización Éxitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ActualizarDataGridView();
+            bool result = _model.ActualizarNomina(nomina); // Llama al método correspondiente en tu modelo
+            if (result)
+            {
+                _vistaNomina.MostrarMensaje("¡La nómina se ha actualizado correctamente!", "Actualización Éxitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 ActualizarDataGridView();
+            }
+            else
+            {
+                _vistaNomina.MostrarMensaje("¡Error al Actualizar la nómina!", "Error al Insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         public void EliminarNominaDGV(int idNomina)
@@ -332,5 +348,32 @@ namespace TimeTrack.Presenter
                 MessageBox.Show("No se encontró el horario del empleado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void MostrarHorarios(DataGridView dataGridView)
+        {
+            dataGridView.Rows.Clear();
+            List<RegistroHorario> horarioRegistro = ObtenerRegistroHorarios();
+
+            if (dataGridView.Columns.Count == 0)
+            {
+                dataGridView.Columns.Add("idHorarioEmpleado", "ID Horario Empleado");
+                dataGridView.Columns.Add("idEmpleado", "ID Empleado");
+                dataGridView.Columns.Add("idHorario", "ID Horario");
+                dataGridView.Columns.Add("fechaInicio", "Fecha Inicio");
+                dataGridView.Columns.Add("fechaFin", "Fecha Fin");
+            }
+
+            foreach (var horarios in horarioRegistro)
+            {
+                dataGridView.Rows.Add(horarios.idHorarioEmpleado, horarios.idHorario, horarios.idEmpleado, horarios.fechaInicio, horarios.fechaFin);
+            }
+        }
+
+        private void MostrarHorariosEmpleados()
+        {
+            MostrarHorarios(_horarioRegistro.DataGridViewHorarioRegistro);
+        }
+
+
     }
 }

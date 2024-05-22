@@ -119,10 +119,17 @@
     <Compile Include="View\FormNominaEmpleado.Designer.cs">
       <DependentUpon>FormNominaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormRegistroHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRegistroHorario.Designer.cs">
+      <DependentUpon>FormRegistroHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\IFormInOut.cs" />
     <Compile Include="View\ILoginView.cs" />
     <Compile Include="View\IMainView.cs" />
     <Compile Include="View\INomina.cs" />
+    <Compile Include="View\IHorarioRegistro.cs" />
     <Compile Include="View\Registro de sesión.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormNominaEmpleado.resx">
       <DependentUpon>FormNominaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRegistroHorario.resx">
+      <DependentUpon>FormRegistroHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Registro de sesión.resx">
       <DependentUpon>Registro de sesión.cs</DependentUpon>

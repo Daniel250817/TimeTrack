@@ -57,18 +57,21 @@ namespace TimeTrack.View
                 // Obtener la fila seleccionada
                 DataGridViewRow filaSeleccionada = dgvNominaAdmin.SelectedRows[0];
 
-                // Obtener los valores de la fila seleccionada y cargarlos en los ComboBoxes
-                // Asumiendo que los ComboBoxes se llaman cmbIdEmpleado, cmbFecha, cmbDescuento, cmbSalarioBase, cmbMontoHrsExtra, cmbMontoHrsDescuento y cmbSalarioNeto
-                txtIdNomina.Text = filaSeleccionada.Cells["idNomina"].Value.ToString();
-                txtIdEmpleado.Text = filaSeleccionada.Cells["idEmpleado"].Value.ToString();
-                txtFecha.Text = filaSeleccionada.Cells["fecha"].Value.ToString();
-                txtDescuento.Text = filaSeleccionada.Cells["descuento"].Value.ToString();
-                txtSalarioBase.Text = filaSeleccionada.Cells["salarioBase"].Value.ToString();
-                txtMontoHrsExtra.Text = filaSeleccionada.Cells["montoHrsExtra"].Value.ToString();
-                txtMontoHrsDescuento.Text = filaSeleccionada.Cells["montoHrsDescuento"].Value.ToString();
-                txtSalarioNeto.Text = filaSeleccionada.Cells["salarioNeto"].Value.ToString();
+                // Verificar si la fila seleccionada no está vacía
+                if (!filaSeleccionada.IsNewRow && filaSeleccionada.Cells.Cast<DataGridViewCell>().All(cell => cell.Value != null))
+                {
+                    txtIdNomina.Text = filaSeleccionada.Cells["idNomina"].Value.ToString();
+                    txtIdEmpleado.Text = filaSeleccionada.Cells["idEmpleado"].Value.ToString();
+                    txtFecha.Text = ((DateTime)filaSeleccionada.Cells["fecha"].Value).ToShortDateString();
+                    txtDescuento.Text = filaSeleccionada.Cells["descuento"].Value.ToString();
+                    txtSalarioBase.Text = filaSeleccionada.Cells["salarioBase"].Value.ToString();
+                    txtMontoHrsExtra.Text = filaSeleccionada.Cells["montoHrsExtra"].Value.ToString();
+                    txtMontoHrsDescuento.Text = filaSeleccionada.Cells["montoHrsDescuento"].Value.ToString();
+                    txtSalarioNeto.Text = filaSeleccionada.Cells["salarioNeto"].Value.ToString();
+                }
             }
         }
+
 
         private void dgvNominaAdmin_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

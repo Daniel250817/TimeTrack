@@ -70,5 +70,11 @@ namespace TimeTrack.View
             FormNomina form1 = new FormNomina();
             _presenter.ShowOrOpenFormInPanel(form1, "FormNomina", panelChild);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormRegistroHorario form1 = new FormRegistroHorario();
+            _presenter.ShowOrOpenFormInPanel(form1, "FormRegistroHorario", panelChild);
+        }
     }
 }

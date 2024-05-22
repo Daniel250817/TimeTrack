@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace TimeTrack.Model
 {
@@ -41,6 +42,16 @@ namespace TimeTrack.Model
         public string entradaSabado { get; set; }
         public string salidaSabado { get; set; }
     }
+
+    public class RegistroHorario
+    {
+        public int idHorarioEmpleado { get; set; }
+        public int idEmpleado { get; set; }
+        public int idHorario { get; set; }
+        public DateTime fechaInicio { get; set; }
+        public DateTime fechaFin { get; set; }
+    }
+
     internal class Model
     {
 
@@ -166,30 +177,40 @@ namespace TimeTrack.Model
         }
 
 
-        public static void ActualizarNomina(Nomina nomina)
+        public bool ActualizarNomina(Nomina nomina)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
-
-            using (SqlConnection conexion = new SqlConnection(connectionString))
+            try
             {
-                string consulta = "UPDATE nomina SET id_empleado = @IdEmpleado, fecha = @Fecha, descuento = @Descuento, salarioBase = @SalarioBase, montoHrsExtra = @MontoHrsExtra, montoHrsDescuento = @MontoHrsDescuento, salarioNeto = @SalarioNeto " +
-                                  "WHERE id_nomina = @IdNomina";
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
 
-                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                using (SqlConnection conexion = new SqlConnection(connectionString))
                 {
-                    comando.Parameters.AddWithValue("@IdNomina", nomina.idNomina);
-                    comando.Parameters.AddWithValue("@IdEmpleado", nomina.idEmpleado);
-                    comando.Parameters.AddWithValue("@Fecha", nomina.fecha);
-                    comando.Parameters.AddWithValue("@Descuento", nomina.descuento);
-                    comando.Parameters.AddWithValue("@SalarioBase", nomina.salarioBase);
-                    comando.Parameters.AddWithValue("@MontoHrsExtra", nomina.montoHrsExtra);
-                    comando.Parameters.AddWithValue("@MontoHrsDescuento", nomina.montoHrsDescuento);
-                    comando.Parameters.AddWithValue("@SalarioNeto", nomina.salarioNeto);
+                    string consulta = "UPDATE nomina SET id_empleado = @IdEmpleado, fecha = @Fecha, descuento = @Descuento, salarioBase = @SalarioBase, montoHrsExtra = @MontoHrsExtra, montoHrsDescuento = @MontoHrsDescuento, salarioNeto = @SalarioNeto " +
+                                      "WHERE id_nomina = @IdNomina";
 
-                    conexion.Open();
-                    comando.ExecuteNonQuery();
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdNomina", nomina.idNomina);
+                        comando.Parameters.AddWithValue("@IdEmpleado", nomina.idEmpleado);
+                        comando.Parameters.AddWithValue("@Fecha", nomina.fecha);
+                        comando.Parameters.AddWithValue("@Descuento", nomina.descuento);
+                        comando.Parameters.AddWithValue("@SalarioBase", nomina.salarioBase);
+                        comando.Parameters.AddWithValue("@MontoHrsExtra", nomina.montoHrsExtra);
+                        comando.Parameters.AddWithValue("@MontoHrsDescuento", nomina.montoHrsDescuento);
+                        comando.Parameters.AddWithValue("@SalarioNeto", nomina.salarioNeto);
+
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        return true;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al insertar la nómina: " + ex.Message);
+                return false;
+            }
+            
         }
 
         public static void EliminarNomina(int idNomina)
@@ -211,6 +232,53 @@ namespace TimeTrack.Model
 
         /*---------Empleados---------*/
 
+
+
+        /*---------Horario-----------*/
+
+        public static List<RegistroHorario> ObtenerRegistroHorarios()
+        {
+            List<RegistroHorario> horarioRegistro = new List<RegistroHorario>();
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "SELECT id_empleado_horario, id_empleado, id_horario, fecha_inicio, fecha_fin FROM empleado_horario";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        conexion.Open();
+                        using (SqlDataReader reader = comando.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                RegistroHorario horarioRegistros = new RegistroHorario
+                                {
+                                    idHorarioEmpleado = reader.GetInt32(reader.GetOrdinal("id_empleado_horario")),
+                                    idEmpleado = reader.GetInt32(reader.GetOrdinal("id_empleado")),
+                                    idHorario = reader.GetInt32(reader.GetOrdinal("id_horario")),
+                                    fechaInicio = reader.GetDateTime(reader.GetOrdinal("fecha_inicio")),
+                                    fechaFin = reader.GetDateTime(reader.GetOrdinal("fecha_fin"))
+                                };
+                                horarioRegistro.Add(horarioRegistros);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Se produjo un error al acceder a la base de datos: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error inesperado: " + ex.Message);
+            }
+
+            return horarioRegistro;
+        }
 
 
 
