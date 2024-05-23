@@ -30,20 +30,21 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnActu = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtIdHorario = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIdUsuaios = new System.Windows.Forms.TextBox();
+            this.txtIdUsuarios = new System.Windows.Forms.TextBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -57,12 +58,14 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(62)))), ((int)(((byte)(185)))));
             this.panel1.BackgroundImage = global::TimeTrack.Properties.Resources.Imagen_fondo;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtIdEmpleado);
+            this.panel1.Controls.Add(this.txtIdUsuarios);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.txtIdHorario);
+            this.panel1.Controls.Add(this.txtContrasena);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtIdEmpleado);
+            this.panel1.Controls.Add(this.txtNombreUsuario);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panelTop);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
@@ -71,23 +74,23 @@
             this.panel1.Size = new System.Drawing.Size(1070, 261);
             this.panel1.TabIndex = 3;
             // 
-            // textBox1
+            // txtIdEmpleado
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(656, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 28);
-            this.textBox1.TabIndex = 18;
+            this.txtIdEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdEmpleado.Location = new System.Drawing.Point(710, 164);
+            this.txtIdEmpleado.Name = "txtIdEmpleado";
+            this.txtIdEmpleado.Size = new System.Drawing.Size(131, 28);
+            this.txtIdEmpleado.TabIndex = 18;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(665, 131);
+            this.label3.Location = new System.Drawing.Point(719, 135);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 22);
@@ -117,6 +120,7 @@
             this.btnInsertar.TabIndex = 1;
             this.btnInsertar.Text = "Agregar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnActu
             // 
@@ -129,6 +133,7 @@
             this.btnActu.TabIndex = 1;
             this.btnActu.Text = "Modificar";
             this.btnActu.UseVisualStyleBackColor = true;
+            this.btnActu.Click += new System.EventHandler(this.btnActu_Click);
             // 
             // btnEliminar
             // 
@@ -141,47 +146,48 @@
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtIdHorario
+            // txtContrasena
             // 
-            this.txtIdHorario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtIdHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdHorario.Location = new System.Drawing.Point(398, 160);
-            this.txtIdHorario.Name = "txtIdHorario";
-            this.txtIdHorario.Size = new System.Drawing.Size(220, 28);
-            this.txtIdHorario.TabIndex = 9;
+            this.txtContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.Location = new System.Drawing.Point(461, 164);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(220, 28);
+            this.txtContrasena.TabIndex = 9;
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(452, 131);
+            this.label5.Location = new System.Drawing.Point(515, 135);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 22);
             this.label5.TabIndex = 8;
             this.label5.Text = "Contraseña";
             // 
-            // txtIdEmpleado
+            // txtNombreUsuario
             // 
-            this.txtIdEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEmpleado.Location = new System.Drawing.Point(84, 160);
-            this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(268, 28);
-            this.txtIdEmpleado.TabIndex = 3;
+            this.txtNombreUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUsuario.Location = new System.Drawing.Point(160, 164);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(268, 28);
+            this.txtNombreUsuario.TabIndex = 3;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(132, 131);
+            this.label2.Location = new System.Drawing.Point(208, 135);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 22);
@@ -194,7 +200,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelTop.Controls.Add(this.label1);
-            this.panelTop.Controls.Add(this.txtIdUsuaios);
             this.panelTop.Location = new System.Drawing.Point(14, 13);
             this.panelTop.Margin = new System.Windows.Forms.Padding(4);
             this.panelTop.Name = "panelTop";
@@ -212,15 +217,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de credenciales de usuarios\r\n";
             // 
-            // txtIdUsuaios
+            // txtIdUsuarios
             // 
-            this.txtIdUsuaios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIdUsuaios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdUsuaios.Location = new System.Drawing.Point(843, 3);
-            this.txtIdUsuaios.Name = "txtIdUsuaios";
-            this.txtIdUsuaios.Size = new System.Drawing.Size(10, 28);
-            this.txtIdUsuaios.TabIndex = 16;
+            this.txtIdUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIdUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdUsuarios.Location = new System.Drawing.Point(40, 164);
+            this.txtIdUsuarios.Name = "txtIdUsuarios";
+            this.txtIdUsuarios.ReadOnly = true;
+            this.txtIdUsuarios.Size = new System.Drawing.Size(88, 28);
+            this.txtIdUsuarios.TabIndex = 16;
             // 
             // dgvUsuarios
             // 
@@ -246,6 +251,21 @@
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.Size = new System.Drawing.Size(1040, 263);
             this.dgvUsuarios.TabIndex = 4;
+            this.dgvUsuarios.SelectionChanged += new System.EventHandler(this.dgvNominaAdmin_SelectionChanged);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(36, 135);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 22);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "ID Usuario";
             // 
             // FormUsuarios
             // 
@@ -257,6 +277,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUsuarios";
             this.Text = "FormUsuarios";
+            this.Load += new System.EventHandler(this.FormUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -274,15 +295,16 @@
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnActu;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtIdHorario;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtIdEmpleado;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdUsuaios;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdUsuarios;
+        private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Label label4;
     }
 }

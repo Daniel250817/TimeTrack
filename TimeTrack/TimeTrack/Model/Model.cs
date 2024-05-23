@@ -28,6 +28,7 @@ namespace TimeTrack.Model
     }
     public class Usuario
     {
+        public int idUsuario { get; set; }
         public string NombreUsuario { get; set; }
         public string Contrasena { get; set; }
         public int idEmpleado { get; set; }
@@ -870,6 +871,132 @@ namespace TimeTrack.Model
             }
         }
 
+        public List<Usuario> ObtenerUsuarios()
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "SELECT id_usuario, nombre_usuario, contrasena, id_empleado FROM usuarios";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        conexion.Open();
+                        using (SqlDataReader reader = comando.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Usuario usuario = new Usuario
+                                {
+                                    idUsuario = reader.GetInt32(reader.GetOrdinal("id_usuario")),
+                                    NombreUsuario = reader.GetString(reader.GetOrdinal("nombre_usuario")),
+                                    Contrasena = reader.GetString(reader.GetOrdinal("contrasena")),
+                                    idEmpleado = reader.GetInt32(reader.GetOrdinal("id_empleado"))
+                                };
+                                usuarios.Add(usuario);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los usuarios: " + ex.Message);
+            }
+
+            return usuarios;
+        }
+
+        public bool InsertarUsuario(Usuario usuario)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "INSERT INTO usuarios (nombre_usuario, contrasena, id_empleado) " +
+                                      "VALUES (@NombreUsuario, @Contrasena, @IdEmpleado)";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@NombreUsuario", usuario.NombreUsuario);
+                        comando.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
+                        comando.Parameters.AddWithValue("@IdEmpleado", usuario.idEmpleado);
+
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el usuario: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool ActualizarUsuario(Usuario usuario)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "UPDATE usuarios SET nombre_usuario = @NombreUsuario, contrasena = @Contrasena, id_empleado = @IdEmpleado " +
+                                      "WHERE id_usuario = @IdUsuario";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdUsuario", usuario.idUsuario);
+                        comando.Parameters.AddWithValue("@NombreUsuario", usuario.NombreUsuario);
+                        comando.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
+                        comando.Parameters.AddWithValue("@IdEmpleado", usuario.idEmpleado);
+
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el usuario: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool EliminarUsuario(int idUsuario)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "DELETE FROM usuarios WHERE id_usuario = @IdUsuario";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdUsuario", idUsuario);
+
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el usuario: " + ex.Message);
+                return false;
+            }
+        }
 
 
 

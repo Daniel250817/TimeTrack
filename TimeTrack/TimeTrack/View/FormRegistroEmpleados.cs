@@ -69,7 +69,7 @@ namespace TimeTrack.View
         private void dgvNominaAdmin_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             // Verificar si la celda actual pertenece a la columna de fecha
-            if (dgvRegistroEmpleados.Columns[e.ColumnIndex].Name == "fecha")
+            if (dgvRegistroEmpleados.Columns[e.ColumnIndex].Name == "fechaNacimiento")
             {
                 // Verificar si el valor de la celda es de tipo DateTime
                 if (e.Value != null && e.Value.GetType() == typeof(DateTime))

@@ -576,6 +576,75 @@ namespace TimeTrack.Presenter
             return nombreValido && entradaLVValida && salidaLVValida && entradaSabadoValida && salidaSabadoValida;
         }
 
+        public void MostrarUsuarios(DataGridView dataGridView)
+        {
+            dataGridView.Rows.Clear();
+            List<Usuario> usuarios = _model.ObtenerUsuarios(); // Utiliza el método correspondiente del modelo
+
+            if (dataGridView.Columns.Count == 0)
+            {
+                dataGridView.Columns.Add("idUsuario", "ID Usuario");
+                dataGridView.Columns.Add("nombreUsuario", "Nombre Usuario");
+                dataGridView.Columns.Add("contrasena", "Contraseña");
+                dataGridView.Columns.Add("idEmpleado", "ID Empleado");
+            }
+
+            foreach (var usuario in usuarios)
+            {
+                dataGridView.Rows.Add(usuario.idUsuario, usuario.NombreUsuario, usuario.Contrasena, usuario.idEmpleado);
+            }
+        }
+
+        public void InsertarUsuario(Usuario usuario)
+        {
+            bool resultado = _model.InsertarUsuario(usuario); // Utiliza el método correspondiente del modelo
+            if (resultado)
+            {
+                _InterCrud.MostrarMensaje("¡El usuario se ha insertado correctamente!", "Inserción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarUsuarios(_InterCrud.DataGridViewCRUD); // Mostrar los usuarios actualizados en la vista
+            }
+            else
+            {
+                _InterCrud.MostrarMensaje("¡Error al insertar el usuario!", "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void ActualizarUsuario(Usuario usuario)
+        {
+            bool result = _model.ActualizarUsuario(usuario); // Llama al método correspondiente en tu modelo
+            if (result)
+            {
+                _InterCrud.MostrarMensaje("¡El usuario se ha actualizado correctamente!", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarUsuarios(_InterCrud.DataGridViewCRUD); // Mostrar los usuarios actualizados en la vista
+            }
+            else
+            {
+                _InterCrud.MostrarMensaje("¡Error al actualizar el usuario!", "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void EliminarUsuario(int idUsuario)
+        {
+            bool result = _model.EliminarUsuario(idUsuario); // Llama al método correspondiente en tu modelo
+            if (result)
+            {
+                _InterCrud.MostrarMensaje("¡El usuario se ha eliminado correctamente!", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarUsuarios(_InterCrud.DataGridViewCRUD); // Mostrar los usuarios actualizados en la vista
+            }
+            else
+            {
+                _InterCrud.MostrarMensaje("¡Error al eliminar el usuario!", "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public bool ValidarCamposUsuario(string nombreUsuario, string contrasena, string idEmpleado)
+        {
+            bool nombreUsuarioValido = Validaciones.ValidarNoVacio(nombreUsuario, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Nombre Usuario");
+            bool contrasenaValida = Validaciones.ValidarNoVacio(contrasena, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Contraseña");
+            bool idEmpleadoValido = Validaciones.ValidarId(idEmpleado, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
+
+            return nombreUsuarioValido && contrasenaValida && idEmpleadoValido;
+        }
 
     }
 }

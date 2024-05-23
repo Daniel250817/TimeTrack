@@ -29,8 +29,14 @@ namespace TimeTrack.View
 
             if(idEmpleado != 1)
             {
+                btnRegistro.Visible = false;
                 btnNominaAdmin.Visible = false;
+                btnJornadaAdmin.Visible = false;
                 btnRegistroHora.Visible = false;
+                btnUsers.Visible = false;
+                btnHorariosAdmin.Visible = false;
+
+
             }
 
         }

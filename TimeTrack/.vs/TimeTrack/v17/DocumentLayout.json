@@ -3,24 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formjornadaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\formjornadaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formjornadaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\formregistroempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formregistroempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formregistroempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formregistroempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formhorariosjornadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formhorariosjornadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\model\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\model\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\presenter\\presenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\presenter\\presenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\formhorariosjornadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formhorariosjornadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formhorariosjornadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formhorariosjornadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\formregistroempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formregistroempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formnomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formnomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\forminout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\forminout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formjornada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,24 +67,8 @@
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formjornadaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\formnominaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formnominaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formnominaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\model\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\model\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formregistroempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formregistroempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formhorariosjornadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formhorariosjornadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formdetalleempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -67,20 +87,16 @@
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formregistrohorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\iempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\iempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\iempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\interfacecrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\interfacecrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\interfacecrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\imainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\imainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formnomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formnomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\iforminout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,14 +111,6 @@
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formjornada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formnomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formnomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -115,16 +123,12 @@
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\inomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|c:\\users\\julio\\documents\\timetrack\\timetrack\\timetrack\\view\\formjornada.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\formjornada.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\formjornada.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\registro de sesi\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\registro de sesi\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\forminout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|solutionrelative:timetrack\\view\\forminout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BAF6156-709D-4A89-B120-F9E5C57B4FD7}|TimeTrack\\TimeTrack.csproj|C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\timetrack\\view\\iloginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -142,11 +146,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 29,
+          "SelectedChildIndex": 30,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "INomina.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\INomina.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\INomina.cs",
@@ -155,18 +159,17 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T04:14:09.992Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Model.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\Model\\Model.cs",
               "RelativeDocumentMoniker": "TimeTrack\\Model\\Model.cs",
               "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\Model\\Model.cs",
               "RelativeToolTip": "TimeTrack\\Model\\Model.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAiwCcAAAAVAAAA",
+              "ViewState": "AQIAAMADAAAAAAAAAAAEwMwDAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-23T10:05:31.283Z",
               "IsPinned": true,
@@ -174,13 +177,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Presenter.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\Presenter\\Presenter.cs",
               "RelativeDocumentMoniker": "TimeTrack\\Presenter\\Presenter.cs",
               "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\Presenter\\Presenter.cs",
               "RelativeToolTip": "TimeTrack\\Presenter\\Presenter.cs",
-              "ViewState": "AQIAADQCAAAAAAAAAAAYwD0CAAA+AAAA",
+              "ViewState": "AQIAAGQCAAAAAAAAAAAEwHMCAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T22:12:41.667Z",
               "IsPinned": true,
@@ -188,54 +191,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormRegistroEmpleados.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroEmpleados.cs",
-              "RelativeDocumentMoniker": "TimeTrack\\View\\FormRegistroEmpleados.cs",
-              "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroEmpleados.cs [Dise\u00F1o]",
-              "RelativeToolTip": "TimeTrack\\View\\FormRegistroEmpleados.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T04:49:10.987Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FormNomina.cs",
-              "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNomina.cs",
-              "RelativeDocumentMoniker": "TimeTrack\\View\\FormNomina.cs",
-              "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNomina.cs",
-              "RelativeToolTip": "TimeTrack\\View\\FormNomina.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAAALQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T06:39:37.89Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormHorariosJornadas.cs",
-              "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormHorariosJornadas.cs",
-              "RelativeDocumentMoniker": "TimeTrack\\View\\FormHorariosJornadas.cs",
-              "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormHorariosJornadas.cs",
-              "RelativeToolTip": "TimeTrack\\View\\FormHorariosJornadas.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAADwv2YAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T09:17:03.268Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "FormRegistroEmpleados.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroEmpleados.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormRegistroEmpleados.cs",
               "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroEmpleados.cs",
               "RelativeToolTip": "TimeTrack\\View\\FormRegistroEmpleados.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAqwGQAAAAnAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAawEYAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-23T08:07:01.687Z",
               "IsPinned": true,
@@ -243,7 +205,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "FormUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormUsuarios.cs",
+              "RelativeDocumentMoniker": "TimeTrack\\View\\FormUsuarios.cs",
+              "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormUsuarios.cs",
+              "RelativeToolTip": "TimeTrack\\View\\FormUsuarios.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAEwHEAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T12:34:45.599Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormRegistroEmpleados.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroEmpleados.cs",
+              "RelativeDocumentMoniker": "TimeTrack\\View\\FormRegistroEmpleados.cs",
+              "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroEmpleados.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TimeTrack\\View\\FormRegistroEmpleados.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T13:05:04.599Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormHorariosJornadas.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormHorariosJornadas.cs",
+              "RelativeDocumentMoniker": "TimeTrack\\View\\FormHorariosJornadas.cs",
+              "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormHorariosJornadas.cs",
+              "RelativeToolTip": "TimeTrack\\View\\FormHorariosJornadas.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAAAGYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T09:17:03.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormNomina.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNomina.cs",
+              "RelativeDocumentMoniker": "TimeTrack\\View\\FormNomina.cs",
+              "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNomina.cs",
+              "RelativeToolTip": "TimeTrack\\View\\FormNomina.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAiwLQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T06:39:37.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "FormNominaEmpleado.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNominaEmpleado.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormNominaEmpleado.cs",
@@ -251,12 +265,11 @@
               "RelativeToolTip": "TimeTrack\\View\\FormNominaEmpleado.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAawBIAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T11:45:08.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T11:45:08.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "FormInOut.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormInOut.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormInOut.cs",
@@ -269,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "IEmpleado.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\IEmpleado.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\IEmpleado.cs",
@@ -277,12 +290,11 @@
               "RelativeToolTip": "TimeTrack\\View\\IEmpleado.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T09:38:32.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T09:38:32.157Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "FormJornada.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormJornada.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormJornada.cs",
@@ -290,12 +302,11 @@
               "RelativeToolTip": "TimeTrack\\View\\FormJornada.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAEwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T05:54:44.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T05:54:44.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "FormJornada.Designer.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormJornada.Designer.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormJornada.Designer.cs",
@@ -303,12 +314,11 @@
               "RelativeToolTip": "TimeTrack\\View\\FormJornada.Designer.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAAAD8AAACMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T07:47:47.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T07:47:47.985Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "FormHorariosJornadas.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormHorariosJornadas.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormHorariosJornadas.cs",
@@ -320,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 7,
               "Title": "FormUsuarios.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormUsuarios.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormUsuarios.cs",
@@ -332,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Registro de sesi\u00F3n.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\Registro de sesi\u00F3n.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\Registro de sesi\u00F3n.cs",
@@ -344,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "FormNomina.Designer.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNomina.Designer.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormNomina.Designer.cs",
@@ -357,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "IMainView.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\IMainView.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\IMainView.cs",
@@ -365,12 +375,11 @@
               "RelativeToolTip": "TimeTrack\\View\\IMainView.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:07:05.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T09:07:05.864Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ILoginView.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\ILoginView.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\ILoginView.cs",
@@ -382,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "IFormInOut.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\IFormInOut.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\IFormInOut.cs",
@@ -390,24 +399,22 @@
               "RelativeToolTip": "TimeTrack\\View\\IFormInOut.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:07:02.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T09:07:02.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "FormNominaEmpleado.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNominaEmpleado.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormNominaEmpleado.cs",
               "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNominaEmpleado.cs [Dise\u00F1o]",
               "RelativeToolTip": "TimeTrack\\View\\FormNominaEmpleado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T08:48:06.878Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-22T08:48:06.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "Utilities.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\Utilities.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\Utilities.cs",
@@ -415,12 +422,11 @@
               "RelativeToolTip": "TimeTrack\\View\\Utilities.cs",
               "ViewState": "AQIAAIIAAAAAAAAAAAAEwJoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T08:01:38.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T08:01:38.273Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "FormRegistroHorario.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroHorario.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormRegistroHorario.cs",
@@ -428,24 +434,22 @@
               "RelativeToolTip": "TimeTrack\\View\\FormRegistroHorario.cs",
               "ViewState": "AQIAAHMAAAAAAAAAAAAwwCQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T06:35:17.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T06:35:17.695Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "FormRegistroHorario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroHorario.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormRegistroHorario.cs",
               "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormRegistroHorario.cs [Dise\u00F1o]",
               "RelativeToolTip": "TimeTrack\\View\\FormRegistroHorario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T06:26:11.176Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-22T06:26:11.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "InterfaceCrud.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\InterfaceCrud.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\InterfaceCrud.cs",
@@ -453,12 +457,11 @@
               "RelativeToolTip": "TimeTrack\\View\\InterfaceCrud.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAvwAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T06:33:53.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T06:33:53.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "FormJornadaAdmin.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormJornadaAdmin.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormJornadaAdmin.cs",
@@ -471,32 +474,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "FormDetalleEmpleado.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormDetalleEmpleado.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormDetalleEmpleado.cs",
               "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormDetalleEmpleado.cs [Dise\u00F1o]",
               "RelativeToolTip": "TimeTrack\\View\\FormDetalleEmpleado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T03:57:37.109Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-22T03:57:37.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "FormMain.cs",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormMain.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormMain.cs",
               "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormMain.cs",
               "RelativeToolTip": "TimeTrack\\View\\FormMain.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAEwBEAAAAAAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAADgv2EAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T03:32:46.419Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 12,
               "Title": "FormInOut.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormInOut.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormInOut.cs",
@@ -508,15 +510,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "FormJornada.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormJornada.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormJornada.cs",
               "ToolTip": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormJornada.cs [Dise\u00F1o]",
               "RelativeToolTip": "TimeTrack\\View\\FormJornada.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T09:44:47.913Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-21T09:44:47.913Z"
             },
             {
               "$type": "Document",
@@ -532,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "FormNomina.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormNomina.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormNomina.cs",
@@ -544,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "Registro de sesi\u00F3n.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\Registro de sesi\u00F3n.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\Registro de sesi\u00F3n.cs",
@@ -555,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 5,
               "Title": "FormMain.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\julio\\Documents\\TimeTrack\\TimeTrack\\TimeTrack\\View\\FormMain.cs",
               "RelativeDocumentMoniker": "TimeTrack\\View\\FormMain.cs",

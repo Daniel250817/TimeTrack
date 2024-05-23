@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHorariosAdmin = new System.Windows.Forms.Button();
+            this.btnJornadaAdmin = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnRegistro = new System.Windows.Forms.Button();
+            this.btnJornadaUser = new System.Windows.Forms.Button();
             this.btnRegistroHora = new System.Windows.Forms.Button();
             this.btnNominaAdmin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,11 +61,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnHorariosAdmin);
+            this.panel2.Controls.Add(this.btnJornadaAdmin);
+            this.panel2.Controls.Add(this.btnUsers);
+            this.panel2.Controls.Add(this.btnRegistro);
+            this.panel2.Controls.Add(this.btnJornadaUser);
             this.panel2.Controls.Add(this.btnRegistroHora);
             this.panel2.Controls.Add(this.btnNominaAdmin);
             this.panel2.Controls.Add(this.label3);
@@ -79,70 +79,70 @@
             this.panel2.Size = new System.Drawing.Size(295, 721);
             this.panel2.TabIndex = 1;
             // 
-            // button5
+            // btnHorariosAdmin
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(12, 540);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(270, 40);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "⏱️Establecer Horarios";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            this.btnHorariosAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorariosAdmin.Location = new System.Drawing.Point(12, 540);
+            this.btnHorariosAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHorariosAdmin.Name = "btnHorariosAdmin";
+            this.btnHorariosAdmin.Size = new System.Drawing.Size(270, 40);
+            this.btnHorariosAdmin.TabIndex = 12;
+            this.btnHorariosAdmin.Text = "⏱️Establecer Horarios";
+            this.btnHorariosAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHorariosAdmin.UseVisualStyleBackColor = true;
+            this.btnHorariosAdmin.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // button4
+            // btnJornadaAdmin
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(12, 387);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(270, 40);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "🎯Jornada Administrativa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btnJornadaAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJornadaAdmin.Location = new System.Drawing.Point(12, 387);
+            this.btnJornadaAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJornadaAdmin.Name = "btnJornadaAdmin";
+            this.btnJornadaAdmin.Size = new System.Drawing.Size(270, 40);
+            this.btnJornadaAdmin.TabIndex = 11;
+            this.btnJornadaAdmin.Text = "🎯Jornada Administrativa";
+            this.btnJornadaAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnJornadaAdmin.UseVisualStyleBackColor = true;
+            this.btnJornadaAdmin.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // button3
+            // btnUsers
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 489);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(270, 40);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "👤Registro de Usuarios\r\n";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.Location = new System.Drawing.Point(12, 489);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(270, 40);
+            this.btnUsers.TabIndex = 10;
+            this.btnUsers.Text = "👤Registro de Usuarios\r\n";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // button2
+            // btnRegistro
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 284);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(270, 40);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "👥Registro de Empleados";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.Location = new System.Drawing.Point(12, 284);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(270, 40);
+            this.btnRegistro.TabIndex = 9;
+            this.btnRegistro.Text = "👥Registro de Empleados";
+            this.btnRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // button1
+            // btnJornadaUser
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 232);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(270, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "📠Jornada";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnJornadaUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJornadaUser.Location = new System.Drawing.Point(12, 232);
+            this.btnJornadaUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJornadaUser.Name = "btnJornadaUser";
+            this.btnJornadaUser.Size = new System.Drawing.Size(270, 40);
+            this.btnJornadaUser.TabIndex = 8;
+            this.btnJornadaUser.Text = "📠Jornada";
+            this.btnJornadaUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnJornadaUser.UseVisualStyleBackColor = true;
+            this.btnJornadaUser.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnRegistroHora
             // 
@@ -365,10 +365,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnNominaAdmin;
         private System.Windows.Forms.Button btnRegistroHora;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnJornadaUser;
+        private System.Windows.Forms.Button btnHorariosAdmin;
+        private System.Windows.Forms.Button btnJornadaAdmin;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnRegistro;
     }
 }

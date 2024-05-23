@@ -58,7 +58,7 @@
             this.lblLunesViernes.Name = "lblLunesViernes";
             this.lblLunesViernes.Size = new System.Drawing.Size(318, 110);
             this.lblLunesViernes.TabIndex = 0;
-            this.lblLunesViernes.Text = "Horario del empleado Lunes a viernes:\r\n\r\nEntrada: 7:00 am\r\n\r\nSalida: 5:00 pm";
+            this.lblLunesViernes.Text = "Horario del empleado Lunes a viernes:\r\n\r\nEntrada: N/A\r\n\r\nSalida: N/A";
             // 
             // panelHora
             // 
@@ -116,7 +116,7 @@
             this.lblSabado.Name = "lblSabado";
             this.lblSabado.Size = new System.Drawing.Size(250, 110);
             this.lblSabado.TabIndex = 1;
-            this.lblSabado.Text = "Horario del empleado sábado:\r\n\r\nEntrada: 8:00 am\r\n\r\nSalida: 12:00 pm\r\n";
+            this.lblSabado.Text = "Horario del empleado sábado:\r\n\r\nEntrada: N/A\r\n\r\nSalida: N/A\r\n";
             // 
             // btnIn
             // 
