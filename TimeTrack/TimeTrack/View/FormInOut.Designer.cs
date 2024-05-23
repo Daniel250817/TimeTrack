@@ -130,6 +130,7 @@
             this.btnIn.TabIndex = 2;
             this.btnIn.Text = "📥\r\n";
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // panelInOut
             // 
@@ -182,6 +183,7 @@
             this.btnOut.TabIndex = 4;
             this.btnOut.Text = "📤";
             this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // panelHour
             // 

@@ -501,6 +501,11 @@ namespace TimeTrack.Presenter
 
             return nombresValidos && apellidosValidos && fechaValida && direccionValida && idCargoValido && telefonoValido;
         }
+        public bool ValidarTelefonoEmpleadoLogueado(string telefono)
+        {
+            bool telefonoValido = Validaciones.ValidarTelefono(telefono, mensaje => _vistaEmple.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            return telefonoValido;
+        }
 
         public void MostrarRegistrosHorarios(DataGridView dataGridView)
         {
@@ -608,6 +613,7 @@ namespace TimeTrack.Presenter
                 _InterCrud.MostrarMensaje("¡Error al insertar el usuario!", "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+       
 
         public void ActualizarUsuario(Usuario usuario)
         {
@@ -679,6 +685,19 @@ namespace TimeTrack.Presenter
             else
             {
                 _InterCrud.MostrarMensaje("¡Error al insertar el registro de jornada!", "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void InsertarJornada(RegistroJornada jornada)
+        {
+            bool resultado = _model.InsertarRegistroJornada(jornada); // Utiliza el método correspondiente del modelo
+            if (resultado)
+            {
+                _view.MostrarMensaje("¡La sesión se ha registrado con éxito, hasta luego!", "Inserción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                _view.MostrarMensaje("¡Error al insertar el usuario!", "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

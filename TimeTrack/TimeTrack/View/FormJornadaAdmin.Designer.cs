@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvJornada = new System.Windows.Forms.DataGridView();
             this.panelTop1 = new System.Windows.Forms.Panel();
             this.txtHorasExtras = new System.Windows.Forms.TextBox();
@@ -72,14 +72,14 @@
             this.dgvJornada.Margin = new System.Windows.Forms.Padding(4);
             this.dgvJornada.Name = "dgvJornada";
             this.dgvJornada.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvJornada.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJornada.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvJornada.RowHeadersWidth = 51;
             this.dgvJornada.Size = new System.Drawing.Size(1040, 260);
             this.dgvJornada.TabIndex = 7;
@@ -344,9 +344,9 @@
             // 
             this.txtIdRegistroHora.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtIdRegistroHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdRegistroHora.Location = new System.Drawing.Point(706, 3);
+            this.txtIdRegistroHora.Location = new System.Drawing.Point(792, 3);
             this.txtIdRegistroHora.Name = "txtIdRegistroHora";
-            this.txtIdRegistroHora.Size = new System.Drawing.Size(130, 28);
+            this.txtIdRegistroHora.Size = new System.Drawing.Size(44, 28);
             this.txtIdRegistroHora.TabIndex = 29;
             // 
             // lblDetails

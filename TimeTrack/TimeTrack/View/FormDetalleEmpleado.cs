@@ -50,6 +50,11 @@ namespace TimeTrack.View
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (!_presenter.ValidarTelefonoEmpleadoLogueado( txtTelefono.Text))
+            {
+                return;
+            }
+
             // Obtener los valores editados de los TextBoxes
             int idEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
             string nombres = txtNombre.Text;

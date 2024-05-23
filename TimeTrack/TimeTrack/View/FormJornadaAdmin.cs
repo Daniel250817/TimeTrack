@@ -33,6 +33,7 @@ namespace TimeTrack.View
         private void FormEmpleado_Load(object sender, EventArgs e)
         {
             _presenter.MostrarRegistrosJornadas(dgvJornada);
+            txtIdRegistroHora.Visible = false;
         }
 
 
