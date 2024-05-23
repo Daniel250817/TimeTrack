@@ -158,11 +158,12 @@
     <Compile Include="View\FormUsuarios.Designer.cs">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\IEmpleado.cs" />
     <Compile Include="View\IFormInOut.cs" />
     <Compile Include="View\ILoginView.cs" />
     <Compile Include="View\IMainView.cs" />
     <Compile Include="View\INomina.cs" />
-    <Compile Include="View\IHorarioRegistro.cs" />
+    <Compile Include="View\InterfaceCrud.cs" />
     <Compile Include="View\Registro de sesión.cs">
       <SubType>Form</SubType>
     </Compile>

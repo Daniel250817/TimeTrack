@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static TimeTrack.Model.Model;
+using TimeTrack.Model;
 
 namespace TimeTrack.View
 {
-    public interface INomina
+    internal interface IEmpleado
     {
-        DataGridView DataGridView { get; }
+        void MostrarEmpleadoLogueado(Empleado empleado);
         void MostrarMensaje(string mensaje, string v, MessageBoxButtons oK, MessageBoxIcon information);
     }
 }

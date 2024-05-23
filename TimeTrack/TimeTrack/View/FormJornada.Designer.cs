@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvNominaAdmin = new System.Windows.Forms.DataGridView();
+            this.dgvJornada = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.lblDetails = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJornada)).BeginInit();
             this.panel1.SuspendLayout();
             this.PanelTop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvNominaAdmin
+            // dgvJornada
             // 
-            this.dgvNominaAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvJornada.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvNominaAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvNominaAdmin.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvNominaAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNominaAdmin.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvNominaAdmin.Location = new System.Drawing.Point(13, 174);
-            this.dgvNominaAdmin.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvNominaAdmin.Name = "dgvNominaAdmin";
+            this.dgvJornada.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvJornada.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvJornada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJornada.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvJornada.Location = new System.Drawing.Point(13, 174);
+            this.dgvJornada.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvJornada.Name = "dgvJornada";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -57,10 +57,11 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNominaAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvNominaAdmin.RowHeadersWidth = 51;
-            this.dgvNominaAdmin.Size = new System.Drawing.Size(774, 263);
-            this.dgvNominaAdmin.TabIndex = 5;
+            this.dgvJornada.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvJornada.RowHeadersWidth = 51;
+            this.dgvJornada.Size = new System.Drawing.Size(774, 263);
+            this.dgvJornada.TabIndex = 5;
+            this.dgvJornada.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvJornada_CellFormatting);
             // 
             // panel1
             // 
@@ -103,13 +104,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvNominaAdmin);
+            this.Controls.Add(this.dgvJornada);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormJornada";
             this.Text = "FormJornada";
             this.Load += new System.EventHandler(this.FormJornada_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJornada)).EndInit();
             this.panel1.ResumeLayout(false);
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
@@ -122,6 +123,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel PanelTop;
         private System.Windows.Forms.Label lblDetails;
-        private System.Windows.Forms.DataGridView dgvNominaAdmin;
+        private System.Windows.Forms.DataGridView dgvJornada;
     }
 }

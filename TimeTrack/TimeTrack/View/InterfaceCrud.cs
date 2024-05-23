@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace TimeTrack.View
 {
-    internal interface IHorarioRegistro
+    internal interface InterfaceCrud
     {
-        DataGridView DataGridViewHorarioRegistro { get; }
+        DataGridView DataGridViewCRUD { get; }
         void MostrarMensaje(string mensaje, string v, MessageBoxButtons oK, MessageBoxIcon information);    
     }
 }

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace TimeTrack.View
 {
@@ -47,6 +49,27 @@ namespace TimeTrack.View
 
     public static class Validaciones
     {
+
+        public static bool ValidarNombre(string nombre, Action<string> mostrarMensaje)
+        {
+            if (string.IsNullOrWhiteSpace(nombre) || nombre.Any(char.IsDigit))
+            {
+                mostrarMensaje("El campo 'Nombre' es inválido. No debe contener números.");
+                return false;
+            }
+            return true;
+        }
+
+        public static bool ValidarNoVacio(string valor, Action<string> mostrarMensaje, string nombreCampo)
+        {
+            if (string.IsNullOrWhiteSpace(valor))
+            {
+                mostrarMensaje($"El campo '{nombreCampo}' no puede estar vacío.");
+                return false;
+            }
+            return true;
+        }
+
         public static bool ValidarId(string id, Action<string> mostrarMensaje)
         {
             if (string.IsNullOrWhiteSpace(id) || !int.TryParse(id, out int idValor) || idValor <= 0)
@@ -86,8 +109,6 @@ namespace TimeTrack.View
             return null; // Si no hay errores, devuelve null
         }
 
-
-
         public static bool ValidarDecimal(string valor, Action<string> mostrarMensaje, string nombreCampo)
         {
             if (string.IsNullOrWhiteSpace(valor) || !decimal.TryParse(valor, out _))
@@ -97,6 +118,43 @@ namespace TimeTrack.View
             }
             return true;
         }
+
+        public static bool ValidarTelefono(string telefono, Action<string> mostrarMensaje)
+        {
+            // Patrón para validar números de teléfono de 8 dígitos
+            string patronTelefono = @"^\d{8}$";
+
+            if (string.IsNullOrWhiteSpace(telefono) || !Regex.IsMatch(telefono, patronTelefono))
+            {
+                mostrarMensaje("El campo 'Teléfono' es inválido. Debe tener 8 dígitos.");
+                return false;
+            }
+            return true;
+        }
+
+        public static bool ValidarHora(string hora, Action<string> mostrarMensaje, string nombreCamp)
+        {
+            // Patrón para validar una hora en formato HH:mm:ss
+            string patronHora = @"^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$";
+
+            if (string.IsNullOrWhiteSpace(hora))
+            {
+                mostrarMensaje($"El campo {nombreCamp} está vacío.");
+                return false;
+            }
+            else if (!Regex.IsMatch(hora, patronHora))
+            {
+                mostrarMensaje($"El campo {nombreCamp} no tiene el formato correcto (HH:mm:ss).");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+
+
     }
 
 }

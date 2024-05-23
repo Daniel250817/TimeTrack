@@ -12,10 +12,10 @@ using TimeTrack.Presenter;
 
 namespace TimeTrack.View
 {
-    public partial class FormRegistroHorario : Form, IHorarioRegistro
+    public partial class FormRegistroHorario : Form, InterfaceCrud
     {
         Presenter.Presenter _presenter;
-        public DataGridView DataGridViewHorarioRegistro
+        public DataGridView DataGridViewCRUD
         {
             get
             {

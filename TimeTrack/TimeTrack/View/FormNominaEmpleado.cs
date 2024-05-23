@@ -18,7 +18,7 @@ namespace TimeTrack.View
         Presenter.Presenter _presenter;
         Nomina nomina;
 
-        public DataGridView DataGridViewNomina
+        public DataGridView DataGridView
         {
             get
             {

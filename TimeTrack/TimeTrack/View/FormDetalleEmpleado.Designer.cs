@@ -30,17 +30,19 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
+            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -72,17 +74,19 @@
             this.panelContainer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelContainer.AutoScroll = true;
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(23)))), ((int)(((byte)(135)))));
-            this.panelContainer.Controls.Add(this.dateTimePicker1);
-            this.panelContainer.Controls.Add(this.textBox1);
+            this.panelContainer.Controls.Add(this.label10);
+            this.panelContainer.Controls.Add(this.txtIdEmpleado);
+            this.panelContainer.Controls.Add(this.dtpFechaNac);
+            this.panelContainer.Controls.Add(this.txtNombre);
             this.panelContainer.Controls.Add(this.btnActualizar);
             this.panelContainer.Controls.Add(this.label2);
-            this.panelContainer.Controls.Add(this.textBox6);
+            this.panelContainer.Controls.Add(this.txtTelefono);
             this.panelContainer.Controls.Add(this.label3);
-            this.panelContainer.Controls.Add(this.textBox5);
+            this.panelContainer.Controls.Add(this.txtCargo);
             this.panelContainer.Controls.Add(this.label4);
-            this.panelContainer.Controls.Add(this.textBox4);
+            this.panelContainer.Controls.Add(this.txtDireccion);
             this.panelContainer.Controls.Add(this.label6);
-            this.panelContainer.Controls.Add(this.textBox2);
+            this.panelContainer.Controls.Add(this.txtApellidos);
             this.panelContainer.Controls.Add(this.label5);
             this.panelContainer.Controls.Add(this.label7);
             this.panelContainer.Location = new System.Drawing.Point(19, 32);
@@ -90,25 +94,50 @@
             this.panelContainer.Size = new System.Drawing.Size(512, 415);
             this.panelContainer.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // label10
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(23, 143);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(465, 28);
-            this.dateTimePicker1.TabIndex = 10;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 5, 21, 22, 22, 25, 0);
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(382, 33);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(112, 22);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "ID Empleado";
             // 
-            // textBox1
+            // txtIdEmpleado
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(23, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 28);
-            this.textBox1.TabIndex = 4;
+            this.txtIdEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIdEmpleado.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdEmpleado.Location = new System.Drawing.Point(386, 59);
+            this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdEmpleado.Name = "txtIdEmpleado";
+            this.txtIdEmpleado.ReadOnly = true;
+            this.txtIdEmpleado.Size = new System.Drawing.Size(108, 28);
+            this.txtIdEmpleado.TabIndex = 11;
+            // 
+            // dtpFechaNac
+            // 
+            this.dtpFechaNac.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNac.Location = new System.Drawing.Point(23, 143);
+            this.dtpFechaNac.Name = "dtpFechaNac";
+            this.dtpFechaNac.Size = new System.Drawing.Size(465, 28);
+            this.dtpFechaNac.TabIndex = 10;
+            this.dtpFechaNac.Value = new System.DateTime(2024, 5, 21, 22, 22, 25, 0);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(23, 59);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(159, 28);
+            this.txtNombre.TabIndex = 4;
             // 
             // btnActualizar
             // 
@@ -120,6 +149,7 @@
             this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "Actualizar información";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label2
             // 
@@ -134,15 +164,15 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombres:";
             // 
-            // textBox6
+            // txtTelefono
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(202, 309);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(286, 28);
-            this.textBox6.TabIndex = 8;
+            this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(202, 309);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(286, 28);
+            this.txtTelefono.TabIndex = 8;
             // 
             // label3
             // 
@@ -150,22 +180,23 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(198, 33);
+            this.label3.Location = new System.Drawing.Point(195, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 22);
             this.label3.TabIndex = 1;
             this.label3.Text = "Apellidos:";
             // 
-            // textBox5
+            // txtCargo
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(25, 309);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(157, 28);
-            this.textBox5.TabIndex = 7;
+            this.txtCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(25, 309);
+            this.txtCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.ReadOnly = true;
+            this.txtCargo.Size = new System.Drawing.Size(157, 28);
+            this.txtCargo.TabIndex = 7;
             // 
             // label4
             // 
@@ -180,15 +211,15 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Fecha de nacimiento:";
             // 
-            // textBox4
+            // txtDireccion
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(23, 217);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(465, 28);
-            this.textBox4.TabIndex = 6;
+            this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(23, 217);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(465, 28);
+            this.txtDireccion.TabIndex = 6;
             // 
             // label6
             // 
@@ -203,15 +234,15 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Cargo:";
             // 
-            // textBox2
+            // txtApellidos
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(202, 59);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 28);
-            this.textBox2.TabIndex = 2;
+            this.txtApellidos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(199, 59);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(172, 28);
+            this.txtApellidos.TabIndex = 2;
             // 
             // label5
             // 
@@ -329,24 +360,26 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtIdEmpleado;
     }
 }

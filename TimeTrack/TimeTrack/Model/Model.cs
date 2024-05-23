@@ -35,6 +35,7 @@ namespace TimeTrack.Model
 
     public class Horario
     {
+        public int idHorario { get; set; }
         public string nombreHorario { get; set; }
         public string entradaLunesViernes { get; set; }
         public string salidaLunesViernes { get; set; }
@@ -49,6 +50,29 @@ namespace TimeTrack.Model
         public int idHorario { get; set; }
         public DateTime fechaInicio { get; set; }
         public DateTime fechaFin { get; set; }
+    }
+
+    public class RegistroJornada
+    {
+        public int IdRegistroHora { get; set; }
+        public int IdEmpleado { get; set; }
+        public DateTime Fecha { get; set; }
+        public string HoraEntrada { get; set; }
+        public string HoraSalida { get; set; }
+        public string HrsTardias { get; set; }
+        public string HrsExtras { get; set; }
+    }
+
+
+    public class Empleado
+    {
+        public int IdEmpleado { get; set; }
+        public string Nombres { get; set; }
+        public string Apellidos { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public string Direccion { get; set; }
+        public int IdCargo { get; set; }
+        public string Telefono { get; set; }
     }
 
     internal class Model
@@ -456,6 +480,415 @@ namespace TimeTrack.Model
 
             return horario;
         }
+
+
+        /*--------------Jornada Logueado-----------------*/
+
+        public List<RegistroJornada> ObtenerJornadaEmpleado(int idEmpleado)
+        {
+            List<RegistroJornada> jornadas = new List<RegistroJornada>();
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            string consulta = "SELECT [id_registro_hora], [id_empleado], [fecha], [hora_entrada], [hora_salida], [hrsTardias], [hrsExtras] " +
+                              "FROM [SISHRS].[dbo].[registro_jornadas] " +
+                              "WHERE [id_empleado] = @IdEmpleado " +
+                              "ORDER BY [fecha] DESC";
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+                        conexion.Open();
+
+                        using (SqlDataReader reader = comando.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                while (reader.Read())
+                                {
+                                    // Obtener los valores del registro de hora
+                                    int idRegistroHora = Convert.ToInt32(reader["id_registro_hora"]);
+                                    int idEmp = Convert.ToInt32(reader["id_empleado"]);
+                                    DateTime fechaRegistro = Convert.ToDateTime(reader["fecha"]);
+                                    string horaEntrada = reader["hora_entrada"].ToString();
+                                    string horaSalida = reader["hora_salida"].ToString();
+                                    string hrsTardias = reader["hrsTardias"].ToString();
+                                    string hrsExtras = reader["hrsExtras"].ToString();
+
+                                    // Crear un objeto RegistroHora con los valores obtenidos
+                                    RegistroJornada jornada = new RegistroJornada
+                                    {
+                                        IdRegistroHora = idRegistroHora,
+                                        IdEmpleado = idEmp,
+                                        Fecha = fechaRegistro,
+                                        HoraEntrada = horaEntrada,
+                                        HoraSalida = horaSalida,
+                                        HrsTardias = hrsTardias,
+                                        HrsExtras = hrsExtras
+                                    };
+
+                                    // Agregar el registro a la lista
+                                    jornadas.Add(jornada);
+                                }
+                            }
+                            else
+                            {
+                                // Mostrar mensaje si no se encuentra el registro
+                                MessageBox.Show("No se encontró ningún registro para el ID del empleado especificado.", "Registro no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de cualquier excepción que pueda ocurrir
+                MessageBox.Show("Se produjo un error al acceder a la base de datos: " + ex.Message, "Error de base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return jornadas;
+        }
+
+
+        /*----------Empleados------------*/
+
+        public static Empleado ObtenerDatosEmpleadoLogueado(int idEmpleado)
+        {
+            Empleado empleado = new Empleado();
+
+            // Obtener la cadena de conexión desde app.config
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                // Consulta SQL para obtener los datos del empleado basados en su ID
+                string consulta = "SELECT id_empleado, nombres, apellidos, fecha_nac, direccion, id_cargo, telefono " +
+                                  "FROM empleado " +
+                                  "WHERE id_empleado = @IdEmpleado";
+
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Ejecutar la consulta y leer los resultados
+                    using (SqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Asignar los valores leídos a las propiedades del objeto Empleado
+                            empleado.IdEmpleado = reader.GetInt32(reader.GetOrdinal("id_empleado"));
+                            empleado.Nombres = reader.GetString(reader.GetOrdinal("nombres"));
+                            empleado.Apellidos = reader.GetString(reader.GetOrdinal("apellidos"));
+                            empleado.FechaNacimiento = reader.GetDateTime(reader.GetOrdinal("fecha_nac"));
+                            empleado.Direccion = reader.GetString(reader.GetOrdinal("direccion"));
+                            empleado.IdCargo = reader.GetInt32(reader.GetOrdinal("id_cargo"));
+                            empleado.Telefono = reader.GetString(reader.GetOrdinal("telefono"));
+                        }
+                    }
+                }
+            }
+            return empleado;
+        }
+
+
+        public static List<Empleado> ObtenerEmpleados()
+        {
+            List<Empleado> empleados = new List<Empleado>();
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "SELECT id_empleado, nombres, apellidos, fecha_nac, direccion, id_cargo, telefono FROM empleado";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        conexion.Open();
+                        using (SqlDataReader reader = comando.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Empleado empleado = new Empleado
+                                {
+                                    IdEmpleado = reader.GetInt32(reader.GetOrdinal("id_empleado")),
+                                    Nombres = reader.GetString(reader.GetOrdinal("nombres")),
+                                    Apellidos = reader.GetString(reader.GetOrdinal("apellidos")),
+                                    FechaNacimiento = reader.GetDateTime(reader.GetOrdinal("fecha_nac")),
+                                    Direccion = reader.GetString(reader.GetOrdinal("direccion")),
+                                    IdCargo = reader.GetInt32(reader.GetOrdinal("id_cargo")),
+                                    Telefono = reader.GetString(reader.GetOrdinal("telefono"))
+                                };
+                                empleados.Add(empleado);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Se produjo un error al acceder a la base de datos: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error inesperado: " + ex.Message);
+            }
+
+            return empleados;
+        }
+
+        public bool InsertarEmpleado(Empleado empleado)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "INSERT INTO empleado (nombres, apellidos, fecha_nac, direccion, id_cargo, telefono) " +
+                                      "VALUES (@Nombres, @Apellidos, @FechaNac, @Direccion, @IdCargo, @Telefono)";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@Nombres", empleado.Nombres);
+                        comando.Parameters.AddWithValue("@Apellidos", empleado.Apellidos);
+                        comando.Parameters.AddWithValue("@FechaNac", empleado.FechaNacimiento);
+                        comando.Parameters.AddWithValue("@Direccion", empleado.Direccion);
+                        comando.Parameters.AddWithValue("@IdCargo", empleado.IdCargo);
+                        comando.Parameters.AddWithValue("@Telefono", empleado.Telefono);
+
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el empleado: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool ActualizarEmpleado(Empleado empleado)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "UPDATE empleado SET nombres = @Nombres, apellidos = @Apellidos, fecha_nac = @FechaNac, direccion = @Direccion, id_cargo = @IdCargo, telefono = @Telefono " +
+                                      "WHERE id_empleado = @IdEmpleado";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdEmpleado", empleado.IdEmpleado);
+                        comando.Parameters.AddWithValue("@Nombres", empleado.Nombres);
+                        comando.Parameters.AddWithValue("@Apellidos", empleado.Apellidos);
+                        comando.Parameters.AddWithValue("@FechaNac", empleado.FechaNacimiento);
+                        comando.Parameters.AddWithValue("@Direccion", empleado.Direccion);
+                        comando.Parameters.AddWithValue("@IdCargo", empleado.IdCargo);
+                        comando.Parameters.AddWithValue("@Telefono", empleado.Telefono);
+
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar el empleado: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool EliminarEmpleado(int idEmpleado)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "DELETE FROM empleado WHERE id_empleado = @IdEmpleado";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar el empleado: " + ex.Message);
+                return false;
+            }
+        }
+
+        public List<Horario> ObtenerHorarios()
+        {
+            List<Horario> horarios = new List<Horario>();
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "SELECT id_horario, nombre, hora_entrada_lunes_viernes, hora_salida_lunes_viernes, hora_entrada_sabado, hora_salida_sabado FROM horario";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        conexion.Open();
+                        using (SqlDataReader reader = comando.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Horario horario = new Horario
+                                {
+                                    idHorario = reader.GetInt32(reader.GetOrdinal("id_horario")),
+                                    nombreHorario = reader.GetString(reader.GetOrdinal("nombre")),
+                                    entradaLunesViernes = reader.GetTimeSpan(reader.GetOrdinal("hora_entrada_lunes_viernes")).ToString(), // Convertir TimeSpan a string
+                                    salidaLunesViernes = reader.GetTimeSpan(reader.GetOrdinal("hora_salida_lunes_viernes")).ToString(), // Convertir TimeSpan a string
+                                    entradaSabado = reader.GetTimeSpan(reader.GetOrdinal("hora_entrada_sabado")).ToString(), // Convertir TimeSpan a string
+                                    salidaSabado = reader.GetTimeSpan(reader.GetOrdinal("hora_salida_sabado")).ToString() // Convertir TimeSpan a string
+                                };
+                                horarios.Add(horario);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los horarios: " + ex.Message);
+            }
+
+            return horarios;
+        }
+
+        public bool InsertarRegistroHorarios(Horario horario)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "INSERT INTO horario (nombre, hora_entrada_lunes_viernes, hora_salida_lunes_viernes, hora_entrada_sabado, hora_salida_sabado) " +
+                                      "VALUES (@Nombre, @EntradaLunesViernes, @SalidaLunesViernes, @EntradaSabado, @SalidaSabado)";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@Nombre", horario.nombreHorario);
+                        comando.Parameters.AddWithValue("@EntradaLunesViernes", horario.entradaLunesViernes);
+                        comando.Parameters.AddWithValue("@SalidaLunesViernes", horario.salidaLunesViernes);
+                        comando.Parameters.AddWithValue("@EntradaSabado", horario.entradaSabado);
+                        comando.Parameters.AddWithValue("@SalidaSabado", horario.salidaSabado);
+
+                        conexion.Open();
+                        int filasAfectadas = comando.ExecuteNonQuery();
+                        return filasAfectadas > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el horario: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool ActualizarRegistroHorarios(Horario horario)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "UPDATE horario SET nombre = @Nombre, hora_entrada_lunes_viernes = @EntradaLunesViernes, " +
+                                      "hora_salida_lunes_viernes = @SalidaLunesViernes, hora_entrada_sabado = @EntradaSabado, " +
+                                      "hora_salida_sabado = @SalidaSabado WHERE id_horario = @IdHorario";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@Nombre", horario.nombreHorario);
+                        comando.Parameters.AddWithValue("@EntradaLunesViernes", horario.entradaLunesViernes);
+                        comando.Parameters.AddWithValue("@SalidaLunesViernes", horario.salidaLunesViernes);
+                        comando.Parameters.AddWithValue("@EntradaSabado", horario.entradaSabado);
+                        comando.Parameters.AddWithValue("@SalidaSabado", horario.salidaSabado);
+                        comando.Parameters.AddWithValue("@IdHorario", horario.idHorario);
+
+                        conexion.Open();
+                        int filasAfectadas = comando.ExecuteNonQuery();
+                        return filasAfectadas > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el horario: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool EliminarRegistroHorarios(int idHorario)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "DELETE FROM horario WHERE id_horario = @IdHorario";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdHorario", idHorario);
+
+                        conexion.Open();
+                        int filasAfectadas = comando.ExecuteNonQuery();
+                        return filasAfectadas > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el horario: " + ex.Message);
+                return false;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

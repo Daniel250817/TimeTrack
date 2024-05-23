@@ -59,7 +59,7 @@ namespace TimeTrack.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormDetalleEmpleado form1 = new FormDetalleEmpleado();
+            FormDetalleEmpleado form1 = new FormDetalleEmpleado(idempleado);
             _presenter.ShowOrOpenFormInPanel(form1, "FormDetalleEmpleado", panelChild);
         }
 
@@ -83,7 +83,7 @@ namespace TimeTrack.View
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FormJornada jornada = new FormJornada();
+            FormJornada jornada = new FormJornada(idempleado);
             _presenter.ShowOrOpenFormInPanel(jornada, "FormJornada", panelChild);
         }
 

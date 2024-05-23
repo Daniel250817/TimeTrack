@@ -16,7 +16,7 @@ namespace TimeTrack.View
     {
         private Presenter.Presenter _presenter;
 
-        public DataGridView DataGridViewNomina
+        public DataGridView DataGridView
         {
             get
             {
@@ -36,14 +36,6 @@ namespace TimeTrack.View
         {
             _presenter.MostrarTodasLasNominas(dgvNominaAdmin);
 
-        }
-
-        
-
-
-        public void MostrarMensaje(string mensaje)
-        {
-            MessageBox.Show(mensaje);
         }
 
 
@@ -92,6 +84,7 @@ namespace TimeTrack.View
             }
         }
 
+        /*---------Botones---------*/
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
@@ -185,11 +178,6 @@ namespace TimeTrack.View
                 // Mostrar un mensaje indicando que no se ha seleccionado ninguna nómina
                 MessageBox.Show("Por favor, seleccione una nómina para eliminar.", "Ninguna nómina seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         public void MostrarMensaje(string mensaje, string titulo, MessageBoxButtons botones, MessageBoxIcon icono)
