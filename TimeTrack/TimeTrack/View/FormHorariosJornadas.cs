@@ -83,20 +83,14 @@ namespace TimeTrack.View
                 return;
             }
 
-            // Convertir los valores de texto a TimeSpan y luego a string en formato "c" (general long form)
-            TimeSpan entradaLV = TimeSpan.Parse(txtLVEntrada.Text);
-            TimeSpan salidaLV = TimeSpan.Parse(txtLVSalida.Text);
-            TimeSpan entradaSB = TimeSpan.Parse(txtSbEntrada.Text);
-            TimeSpan salidaSB = TimeSpan.Parse(txtSbSalida.Text);
-
             Horario horario = new Horario
             {
-                idHorario = Convert.ToInt32(txtIdHorario.Text),
+                
                 nombreHorario = txtNombre.Text,
-                entradaLunesViernes = entradaLV.ToString(@"hh\:mm"),
-                salidaLunesViernes = salidaLV.ToString(@"hh\:mm"),
-                entradaSabado = entradaSB.ToString(@"hh\:mm"),
-                salidaSabado = salidaSB.ToString(@"hh\:mm")
+                entradaLunesViernes = txtLVEntrada.Text,
+                salidaLunesViernes = txtLVSalida.Text,
+                entradaSabado = txtSbEntrada.Text,
+                salidaSabado = txtSbSalida.Text
             };
 
             _presenter.InsertarRegistrosHorario(horario);
