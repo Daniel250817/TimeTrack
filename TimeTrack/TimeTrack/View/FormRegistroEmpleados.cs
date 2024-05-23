@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TimeTrack.View
 {
-    public partial class FormJornada : Form
+    public partial class FormRegistroEmpleados : Form
     {
-        public FormJornada()
+        public FormRegistroEmpleados()
         {
             InitializeComponent();
-        }
-
-        private void FormJornada_Load(object sender, EventArgs e)
-        {
-            Utilities.BorderRadius(PanelTop, 10);
         }
     }
 }

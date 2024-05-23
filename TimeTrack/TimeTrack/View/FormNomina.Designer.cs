@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNominaAdmin = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnActu = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
@@ -71,14 +71,14 @@
             this.dgvNominaAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNominaAdmin.Name = "dgvNominaAdmin";
             this.dgvNominaAdmin.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNominaAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNominaAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNominaAdmin.RowHeadersWidth = 51;
             this.dgvNominaAdmin.Size = new System.Drawing.Size(1035, 249);
             this.dgvNominaAdmin.TabIndex = 0;
@@ -92,6 +92,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(62)))), ((int)(((byte)(185)))));
             this.panel1.BackgroundImage = global::TimeTrack.Properties.Resources.Imagen_fondo;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Controls.Add(this.dtpFecha);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtSalarioNeto);
             this.panel1.Controls.Add(this.label8);
@@ -104,7 +105,6 @@
             this.panel1.Controls.Add(this.txtDescuento);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtFecha);
             this.panel1.Controls.Add(this.txtIdEmpleado);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panelTop);
@@ -114,6 +114,16 @@
             this.panel1.Size = new System.Drawing.Size(1068, 261);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Location = new System.Drawing.Point(340, 97);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpFecha.Size = new System.Drawing.Size(346, 28);
+            this.dtpFecha.TabIndex = 0;
             // 
             // panel2
             // 
@@ -131,7 +141,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(45, 23);
+            this.button1.Location = new System.Drawing.Point(45, 37);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 34);
@@ -144,7 +154,7 @@
             // 
             this.btnActu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActu.Location = new System.Drawing.Point(45, 87);
+            this.btnActu.Location = new System.Drawing.Point(45, 101);
             this.btnActu.Margin = new System.Windows.Forms.Padding(4);
             this.btnActu.Name = "btnActu";
             this.btnActu.Size = new System.Drawing.Size(100, 34);
@@ -157,7 +167,7 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(45, 147);
+            this.button3.Location = new System.Drawing.Point(45, 161);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 34);
@@ -193,12 +203,12 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(585, 167);
+            this.label7.Location = new System.Drawing.Point(580, 214);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 22);
@@ -207,9 +217,9 @@
             // 
             // txtMontoHrsDescuento
             // 
-            this.txtMontoHrsDescuento.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtMontoHrsDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMontoHrsDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMontoHrsDescuento.Location = new System.Drawing.Point(750, 161);
+            this.txtMontoHrsDescuento.Location = new System.Drawing.Point(745, 208);
             this.txtMontoHrsDescuento.Name = "txtMontoHrsDescuento";
             this.txtMontoHrsDescuento.Size = new System.Drawing.Size(110, 28);
             this.txtMontoHrsDescuento.TabIndex = 12;
@@ -221,7 +231,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(278, 165);
+            this.label6.Location = new System.Drawing.Point(273, 212);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 22);
@@ -232,7 +242,7 @@
             // 
             this.txtMontoHrsExtra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMontoHrsExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMontoHrsExtra.Location = new System.Drawing.Point(438, 159);
+            this.txtMontoHrsExtra.Location = new System.Drawing.Point(433, 206);
             this.txtMontoHrsExtra.Name = "txtMontoHrsExtra";
             this.txtMontoHrsExtra.Size = new System.Drawing.Size(104, 28);
             this.txtMontoHrsExtra.TabIndex = 10;
@@ -264,21 +274,21 @@
             // 
             // txtDescuento
             // 
-            this.txtDescuento.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescuento.Location = new System.Drawing.Point(750, 96);
+            this.txtDescuento.Location = new System.Drawing.Point(433, 156);
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(110, 28);
+            this.txtDescuento.Size = new System.Drawing.Size(104, 28);
             this.txtDescuento.TabIndex = 7;
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(585, 101);
+            this.label4.Location = new System.Drawing.Point(273, 159);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 22);
@@ -292,21 +302,12 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(285, 97);
+            this.label3.Location = new System.Drawing.Point(273, 102);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "Fecha";
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFecha.Location = new System.Drawing.Point(352, 99);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(190, 28);
-            this.txtFecha.TabIndex = 4;
             // 
             // txtIdEmpleado
             // 
@@ -401,7 +402,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label4;
@@ -416,5 +416,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtIdNomina;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

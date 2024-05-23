@@ -29,14 +29,38 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvNominaAdmin = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.lblDetails = new System.Windows.Forms.Label();
-            this.dgvNominaAdmin = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).BeginInit();
             this.panel1.SuspendLayout();
             this.PanelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvNominaAdmin
+            // 
+            this.dgvNominaAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvNominaAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNominaAdmin.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvNominaAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNominaAdmin.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvNominaAdmin.Location = new System.Drawing.Point(13, 174);
+            this.dgvNominaAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvNominaAdmin.Name = "dgvNominaAdmin";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNominaAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNominaAdmin.RowHeadersWidth = 51;
+            this.dgvNominaAdmin.Size = new System.Drawing.Size(774, 263);
+            this.dgvNominaAdmin.TabIndex = 5;
             // 
             // panel1
             // 
@@ -74,30 +98,6 @@
             this.lblDetails.TabIndex = 0;
             this.lblDetails.Text = "El siguiente recuadro pertenece a sus jornadas laboral\r\n";
             // 
-            // dgvNominaAdmin
-            // 
-            this.dgvNominaAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvNominaAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvNominaAdmin.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvNominaAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNominaAdmin.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvNominaAdmin.Location = new System.Drawing.Point(13, 174);
-            this.dgvNominaAdmin.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvNominaAdmin.Name = "dgvNominaAdmin";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNominaAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvNominaAdmin.RowHeadersWidth = 51;
-            this.dgvNominaAdmin.Size = new System.Drawing.Size(774, 263);
-            this.dgvNominaAdmin.TabIndex = 5;
-            // 
             // FormJornada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -108,10 +108,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormJornada";
             this.Text = "FormJornada";
+            this.Load += new System.EventHandler(this.FormJornada_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).EndInit();
             this.panel1.ResumeLayout(false);
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNominaAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }

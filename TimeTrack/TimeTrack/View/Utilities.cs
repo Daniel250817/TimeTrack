@@ -34,6 +34,15 @@ namespace TimeTrack.View
             // Aplicar la forma al panel
             panel.Region = new Region(forma);
         }
+
+        public static void AjustarOpacidad(Panel panel)
+        {
+            if (panel != null)
+            {
+                panel.BackColor = Color.FromArgb(120, panel.BackColor);
+            }
+            return;
+        }
     }
 
     public static class Validaciones

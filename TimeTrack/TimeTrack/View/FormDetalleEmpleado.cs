@@ -15,6 +15,17 @@ namespace TimeTrack.View
         public FormDetalleEmpleado()
         {
             InitializeComponent();
+            Utilities.BorderRadius(panelContainer, 10);
+            panelContainer.AutoScroll = true;
+            panelContainer.VerticalScroll.Visible = true;
+            panelContainer.HorizontalScroll.Visible = true;
+            panelContainer.SetAutoScrollMargin(0, 100);
         }
+
+        private void FormDetalleEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

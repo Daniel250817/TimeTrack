@@ -30,6 +30,7 @@ namespace TimeTrack.View
             if(idEmpleado != 1)
             {
                 btnNominaAdmin.Visible = false;
+                btnRegistroHora.Visible = false;
             }
 
         }
@@ -38,12 +39,15 @@ namespace TimeTrack.View
         {
             Utilities.BorderRadius(panelChild, 10);
             Utilities.BorderRadius(panelDatosUser, 10);
+            Utilities.AjustarOpacidad(panelDatosUser);
             _presenter = new Presenter.Presenter();
             panel2.AutoScroll = true;
             panel2.HorizontalScroll.Visible = false;
-            panel2.VerticalScroll.Visible = false;
+            panel2.VerticalScroll.Visible = true;
             panel2.SetAutoScrollMargin(0, 100);
-            
+            FormInOut form1 = new FormInOut(idempleado);
+            _presenter.ShowOrOpenFormInPanel(form1, "FormInOut", panelChild);
+
         }
 
         private Dictionary<string, Form> _OpenForms = new Dictionary<string, Form>();
@@ -75,6 +79,36 @@ namespace TimeTrack.View
         {
             FormRegistroHorario form1 = new FormRegistroHorario();
             _presenter.ShowOrOpenFormInPanel(form1, "FormRegistroHorario", panelChild);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormJornada jornada = new FormJornada();
+            _presenter.ShowOrOpenFormInPanel(jornada, "FormJornada", panelChild);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FormRegistroEmpleados formRegistroEmpleados = new FormRegistroEmpleados();
+            _presenter.ShowOrOpenFormInPanel(formRegistroEmpleados, "FormRegistroEmpleados", panelChild);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            FormUsuarios formUsuarios = new FormUsuarios();
+            _presenter.ShowOrOpenFormInPanel(formUsuarios, "FormUsuarios", panelChild);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            FormJornadaAdmin formJornadaAdmin = new FormJornadaAdmin();
+            _presenter.ShowOrOpenFormInPanel(formJornadaAdmin, "FormJornadaAdmin", panelChild);
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            FormHorariosJornadas formHorariosJornadas = new FormHorariosJornadas();
+            _presenter.ShowOrOpenFormInPanel(formHorariosJornadas, "FormHorariosJornadas", panelChild);
         }
     }
 }

@@ -62,12 +62,16 @@ namespace TimeTrack.View
                 {
                     txtIdNomina.Text = filaSeleccionada.Cells["idNomina"].Value.ToString();
                     txtIdEmpleado.Text = filaSeleccionada.Cells["idEmpleado"].Value.ToString();
-                    txtFecha.Text = ((DateTime)filaSeleccionada.Cells["fecha"].Value).ToShortDateString();
+                    dtpFecha.Text = ((DateTime)filaSeleccionada.Cells["fecha"].Value).ToShortDateString();
                     txtDescuento.Text = filaSeleccionada.Cells["descuento"].Value.ToString();
                     txtSalarioBase.Text = filaSeleccionada.Cells["salarioBase"].Value.ToString();
                     txtMontoHrsExtra.Text = filaSeleccionada.Cells["montoHrsExtra"].Value.ToString();
                     txtMontoHrsDescuento.Text = filaSeleccionada.Cells["montoHrsDescuento"].Value.ToString();
                     txtSalarioNeto.Text = filaSeleccionada.Cells["salarioNeto"].Value.ToString();
+                }
+                else
+                {
+                    LimpiarCampos();
                 }
             }
         }
@@ -91,7 +95,7 @@ namespace TimeTrack.View
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            if (!_presenter.ValidarCamposNomina(txtIdEmpleado.Text, txtFecha.Text, txtDescuento.Text, txtSalarioBase.Text, txtMontoHrsExtra.Text, txtMontoHrsDescuento.Text, txtSalarioNeto.Text))
+            if (!_presenter.ValidarCamposNomina(txtIdEmpleado.Text, dtpFecha.Text, txtDescuento.Text, txtSalarioBase.Text, txtMontoHrsExtra.Text, txtMontoHrsDescuento.Text, txtSalarioNeto.Text))
             {
                 return;
             }
@@ -99,7 +103,7 @@ namespace TimeTrack.View
             Nomina nomina = new Nomina
             {
                 idEmpleado = Convert.ToInt32(txtIdEmpleado.Text),
-                fecha = DateTime.Parse(txtFecha.Text),
+                fecha = DateTime.Parse(dtpFecha.Text),
                 descuento = Convert.ToDecimal(txtDescuento.Text),
                 salarioBase = Convert.ToDecimal(txtSalarioBase.Text),
                 montoHrsExtra = Convert.ToDecimal(txtMontoHrsExtra.Text),
@@ -113,14 +117,14 @@ namespace TimeTrack.View
 
         private void btnActu_Click(object sender, EventArgs e)
         {
-            if (!_presenter.ValidarCamposNomina(txtIdEmpleado.Text, txtFecha.Text, txtDescuento.Text, txtSalarioBase.Text, txtMontoHrsExtra.Text, txtMontoHrsDescuento.Text, txtSalarioNeto.Text))
+            if (!_presenter.ValidarCamposNomina(txtIdEmpleado.Text, dtpFecha.Text, txtDescuento.Text, txtSalarioBase.Text, txtMontoHrsExtra.Text, txtMontoHrsDescuento.Text, txtSalarioNeto.Text))
             {
                 return;
             }
             // Obtener los valores editados de los TextBoxes
             int idNomina = Convert.ToInt32(txtIdNomina.Text);
             int idEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
-            DateTime fecha = Convert.ToDateTime(txtFecha.Text);
+            DateTime fecha = Convert.ToDateTime(dtpFecha.Text);
             decimal descuento = Convert.ToDecimal(txtDescuento.Text);
             decimal salarioBase = Convert.ToDecimal(txtSalarioBase.Text);
             decimal montoHrsExtra = Convert.ToDecimal(txtMontoHrsExtra.Text);
@@ -153,7 +157,7 @@ namespace TimeTrack.View
             // Asumiendo que los Comb
             txtIdNomina.Text = "";
             txtIdEmpleado.Text = "";
-             txtFecha.Text = "";
+             dtpFecha.Text = "";
             txtDescuento.Text = "";
             txtSalarioBase.Text = "";
             txtMontoHrsExtra.Text = "";

@@ -28,6 +28,7 @@ namespace TimeTrack.View
             _presenter = new Presenter.Presenter(this);
             txtIdRegistroHorario.Visible = false;
             Utilities.BorderRadius(panelTop,10);
+            Utilities.AjustarOpacidad(panel2);
 
         }
 
@@ -74,6 +75,10 @@ namespace TimeTrack.View
                     {
                         dtpFin.Value = DateTime.Now; // Valor predeterminado en caso de error
                     }
+                }
+                else
+                {
+                    LimpiarCampos();
                 }
             }
         }
@@ -186,5 +191,9 @@ namespace TimeTrack.View
             dtpFin.Value = DateTime.Now;
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
