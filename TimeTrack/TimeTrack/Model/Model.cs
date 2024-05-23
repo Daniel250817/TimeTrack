@@ -553,7 +553,148 @@ namespace TimeTrack.Model
             return jornadas;
         }
 
+        public List<RegistroJornada> ObtenerRegistrosJornadas()
+        {
+            List<RegistroJornada> registrosJornadas = new List<RegistroJornada>();
+            string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
 
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "SELECT id_registro_hora, id_empleado, fecha, hora_entrada, hora_salida, hrsTardias, hrsExtras FROM registro_jornadas";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        conexion.Open();
+                        using (SqlDataReader reader = comando.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // Obtener los valores del registro de hora
+                                int idRegistroHora = Convert.ToInt32(reader["id_registro_hora"]);
+                                int idEmp = Convert.ToInt32(reader["id_empleado"]);
+                                DateTime fechaRegistro = Convert.ToDateTime(reader["fecha"]);
+                                string horaEntrada = reader["hora_entrada"].ToString();
+                                string horaSalida = reader["hora_salida"].ToString();
+                                string hrsTardias = reader["hrsTardias"].ToString();
+                                string hrsExtras = reader["hrsExtras"].ToString();
+                                RegistroJornada registroJornada = new RegistroJornada
+                                {
+                                    IdRegistroHora = idRegistroHora,
+                                    IdEmpleado = idEmp,
+                                    Fecha = fechaRegistro,
+                                    HoraEntrada = horaEntrada,
+                                    HoraSalida = horaSalida,
+                                    HrsTardias = hrsTardias,
+                                    HrsExtras = hrsExtras
+                                };
+                                registrosJornadas.Add(registroJornada);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los registros de jornadas: " + ex.Message);
+            }
+
+            return registrosJornadas;
+        }
+
+        public bool InsertarRegistroJornada(RegistroJornada registroJornada)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "INSERT INTO registro_jornadas (id_empleado, fecha, hora_entrada, hora_salida, hrsTardias, hrsExtras) " +
+                                      "VALUES (@IdEmpleado, @Fecha, @HoraEntrada, @HoraSalida, @HorasTardias, @HorasExtras)";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdEmpleado", registroJornada.IdEmpleado);
+                        comando.Parameters.AddWithValue("@Fecha", registroJornada.Fecha);
+                        comando.Parameters.AddWithValue("@HoraEntrada", registroJornada.HoraEntrada);
+                        comando.Parameters.AddWithValue("@HoraSalida", registroJornada.HoraSalida);
+                        comando.Parameters.AddWithValue("@HorasTardias", registroJornada.HrsTardias);
+                        comando.Parameters.AddWithValue("@HorasExtras", registroJornada.HrsExtras);
+
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el registro de jornada: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool ActualizarRegistroJornada(RegistroJornada registroJornada)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "UPDATE registro_jornadas SET id_empleado = @IdEmpleado, fecha = @Fecha, hora_entrada = @HoraEntrada, hora_salida = @HoraSalida, hrsTardias = @HorasTardias, hrsExtras = @HorasExtras " +
+                                      "WHERE id_registro_hora = @IdRegistroHora";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdEmpleado", registroJornada.IdEmpleado);
+                        comando.Parameters.AddWithValue("@Fecha", registroJornada.Fecha);
+                        comando.Parameters.AddWithValue("@HoraEntrada", registroJornada.HoraEntrada);
+                        comando.Parameters.AddWithValue("@HoraSalida", registroJornada.HoraSalida);
+                        comando.Parameters.AddWithValue("@HorasTardias", registroJornada.HrsTardias);
+                        comando.Parameters.AddWithValue("@HorasExtras", registroJornada.HrsExtras);
+                        comando.Parameters.AddWithValue("@IdRegistroHora", registroJornada.IdRegistroHora);
+
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar el registro de jornada: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool EliminarRegistroJornada(int idRegistroHora)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    string consulta = "DELETE FROM registro_jornadas WHERE id_registro_hora = @IdRegistroHora";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@IdRegistroHora", idRegistroHora);
+                        conexion.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al Eliminar el registro de jornada: " + ex.Message);
+                return false;
+            }
+        }
         /*----------Empleados------------*/
 
         public static Empleado ObtenerDatosEmpleadoLogueado(int idEmpleado)

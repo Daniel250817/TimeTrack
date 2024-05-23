@@ -169,8 +169,6 @@ namespace TimeTrack.View
             dtpFechaNac.Value = DateTime.Now;
         }
 
-
-
         public void MostrarMensaje(string mensaje, string titulo, MessageBoxButtons botones, MessageBoxIcon icono)
         {
             MessageBox.Show(this, mensaje, titulo, botones, icono);

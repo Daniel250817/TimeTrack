@@ -646,5 +646,84 @@ namespace TimeTrack.Presenter
             return nombreUsuarioValido && contrasenaValida && idEmpleadoValido;
         }
 
+        public void MostrarRegistrosJornadas(DataGridView dataGridView)
+        {
+            dataGridView.Rows.Clear();
+            List<RegistroJornada> registrosJornadas = _model.ObtenerRegistrosJornadas(); // Utiliza el método correspondiente del modelo
+
+            if (dataGridView.Columns.Count == 0)
+            {
+                dataGridView.Columns.Add("IdRegistroHora", "ID Registro");
+                dataGridView.Columns.Add("IdEmpleado", "ID Empleado");
+                dataGridView.Columns.Add("Fecha", "Fecha");
+                dataGridView.Columns.Add("HoraEntrada", "Hora Entrada");
+                dataGridView.Columns.Add("HoraSalida", "Hora Salida");
+                dataGridView.Columns.Add("HorasTardias", "Horas Tardías");
+                dataGridView.Columns.Add("HorasExtras", "Horas Extras");
+            }
+
+            foreach (var registroJornada in registrosJornadas)
+            {
+                dataGridView.Rows.Add(registroJornada.IdRegistroHora, registroJornada.IdEmpleado, registroJornada.Fecha, registroJornada.HoraEntrada, registroJornada.HoraSalida, registroJornada.HrsTardias, registroJornada.HrsExtras);
+            }
+        }
+
+        public void InsertarRegistroJornada(RegistroJornada registroJornada)
+        {
+            bool resultado = _model.InsertarRegistroJornada(registroJornada); // Utiliza el método correspondiente del modelo
+            if (resultado)
+            {
+                _InterCrud.MostrarMensaje("¡El registro de jornada se ha insertado correctamente!", "Inserción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarRegistrosJornadas(_InterCrud.DataGridViewCRUD); // Mostrar los registros actualizados en la vista
+            }
+            else
+            {
+                _InterCrud.MostrarMensaje("¡Error al insertar el registro de jornada!", "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void ActualizarRegistroJornada(RegistroJornada registroJornada)
+        {
+            bool result = _model.ActualizarRegistroJornada(registroJornada); // Llama al método correspondiente en tu modelo
+            if (result)
+            {
+                _InterCrud.MostrarMensaje("¡El registro de jornada se ha actualizado correctamente!", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarRegistrosJornadas(_InterCrud.DataGridViewCRUD); // Mostrar los registros actualizados en la vista
+            }
+            else
+            {
+                _InterCrud.MostrarMensaje("¡Error al actualizar el registro de jornada!", "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void EliminarRegistroJornada(int idRegistroHora)
+        {
+            bool result = _model.EliminarRegistroJornada(idRegistroHora); // Llama al método correspondiente en tu modelo
+            if (result)
+            {
+                _InterCrud.MostrarMensaje("¡El registro de jornada se ha eliminado correctamente!", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarRegistrosJornadas(_InterCrud.DataGridViewCRUD); // Mostrar los registros actualizados en la vista
+            }
+            else
+            {
+                _InterCrud.MostrarMensaje("¡Error al eliminar el registro de jornada!", "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public bool ValidarCamposRegistroJornada(string idEmpleado, string fecha, string horaEntrada, string horaSalida, string horasTardias, string horasExtras)
+        {
+            bool idEmpleadoValido = Validaciones.ValidarId(idEmpleado, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            bool FechaValida = Validaciones.ValidarFecha(fecha, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            bool horasEntrada = Validaciones.ValidarHora(horaEntrada, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error),"Hora Entrada");
+            bool horasSalida = Validaciones.ValidarHora(horaSalida, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Hora Salida");
+            bool horaTardia = Validaciones.ValidarHora(horasTardias, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Hora Tardia");
+            bool horaExtra= Validaciones.ValidarHora(horasExtras, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Hora Extra");
+            return idEmpleadoValido;
+        }
+
+
+
+
+
     }
 }
