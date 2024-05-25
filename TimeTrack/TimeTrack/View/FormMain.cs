@@ -15,7 +15,6 @@ namespace TimeTrack.View
 {
     public partial class FormMain : Form
     {
-        private Model.Model model;
         private Presenter.Presenter _presenter;
 
         int idempleado;

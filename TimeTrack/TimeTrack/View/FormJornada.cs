@@ -14,7 +14,6 @@ namespace TimeTrack.View
     public partial class FormJornada : Form, INomina
     {
         Presenter.Presenter _presenter;
-        RegistroJornada jornada;
 
         public DataGridView DataGridView
         {

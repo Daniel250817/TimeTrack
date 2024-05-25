@@ -277,9 +277,9 @@
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(610, 12);
+            this.lblUser.Location = new System.Drawing.Point(610, 5);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(525, 18);
+            this.lblUser.Size = new System.Drawing.Size(525, 34);
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "User";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -290,7 +290,7 @@
             this.lblCargo.BackColor = System.Drawing.Color.Transparent;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCargo.Location = new System.Drawing.Point(590, 46);
+            this.lblCargo.Location = new System.Drawing.Point(590, 37);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(545, 29);
             this.lblCargo.TabIndex = 3;

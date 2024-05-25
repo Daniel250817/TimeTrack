@@ -8,7 +8,6 @@ namespace TimeTrack.View
     public partial class FormInOut : Form, IMainView, IFormInOut
     {
         private Presenter.Presenter _presenter;
-        private Model.Model _model;
         private DateTime horaEntrada;
         private DateTime horaSalida;
         private Horario horario;
