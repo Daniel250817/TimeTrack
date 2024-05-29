@@ -108,6 +108,10 @@ namespace TimeTrack.View
             {
                 return;
             }
+            if (!_presenter.ValidarCamposidActu(txtIdEmpleado.Text))
+            {
+                return;
+            }
 
             // Obtener los valores editados de los TextBoxes
             int idEmpleado = Convert.ToInt32(txtIdEmpleado.Text);

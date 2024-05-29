@@ -82,7 +82,12 @@ namespace TimeTrack.View
             {
                 return;
             }
-
+            string id = txtIdUsuarios.Text;
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                MessageBox.Show("No se ha seleccionado un registro para actualizar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             // Obtener los valores editados de los TextBoxes
             int idUsuario = Convert.ToInt32(txtIdUsuarios.Text);
             string nombreUsuario = txtNombreUsuario.Text;

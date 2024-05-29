@@ -108,6 +108,10 @@ namespace TimeTrack.View
             {
                 return;
             }
+            if (!_presenter.ValidarCamposidActu(txtIdRegistroHora.Text))
+            {
+                return;
+            }
             int idRegistroHora = Convert.ToInt32(txtIdRegistroHora.Text);
             int idEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
             DateTime fecha = dtpFecha.Value;
@@ -160,7 +164,8 @@ namespace TimeTrack.View
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            int busquedaID = Convert.ToInt32(txtID.Text);
+            _presenter.MostrarJornadasEmpleadoLogueado(dgvJornada, busquedaID);
         }
 
     }

@@ -325,7 +325,7 @@ namespace TimeTrack.Presenter
             }
             else
             {
-                _vistaNomina.MostrarMensaje("¡Error al insertar el horario!", "Error al Insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _InterCrud.MostrarMensaje("¡Error al insertar el horario!", "Error al Insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -492,8 +492,8 @@ namespace TimeTrack.Presenter
 
         public bool ValidarCamposEmpleado(string nombres, string apellidos, string fechaNacimiento, string direccion, string idCargo, string telefono)
         {
-            bool nombresValidos = Validaciones.ValidarNoVacio(nombres, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Nombres");
-            bool apellidosValidos = Validaciones.ValidarNoVacio(apellidos, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Apellidos");
+            bool nombresValidos = Validaciones.ValidarNombre(nombres, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Nombres");
+            bool apellidosValidos = Validaciones.ValidarNombre(apellidos, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Apellidos");
             bool fechaValida = Validaciones.ValidarFecha(fechaNacimiento, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
             bool direccionValida = Validaciones.ValidarNoVacio(direccion, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error), "Dirección");
             bool idCargoValido = Validaciones.ValidarId(idCargo, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
@@ -740,7 +740,12 @@ namespace TimeTrack.Presenter
             return idEmpleadoValido;
         }
 
+        public bool ValidarCamposidActu(string id)
+        {
+            bool idValido = Validaciones.ValidarId(id, mensaje => _InterCrud.MostrarMensaje(mensaje, "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error));
 
+            return idValido;
+        }
 
 
 

@@ -50,11 +50,11 @@ namespace TimeTrack.View
     public static class Validaciones
     {
 
-        public static bool ValidarNombre(string nombre, Action<string> mostrarMensaje)
+        public static bool ValidarNombre(string nombre, Action<string> mostrarMensaje, string nombreCamp)
         {
             if (string.IsNullOrWhiteSpace(nombre) || nombre.Any(char.IsDigit))
             {
-                mostrarMensaje("El campo 'Nombre' es inválido. No debe contener números.");
+                mostrarMensaje($"El campo {nombreCamp} es inválido. No debe contener números ni estar vacío.");
                 return false;
             }
             return true;

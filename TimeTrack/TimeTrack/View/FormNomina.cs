@@ -114,6 +114,12 @@ namespace TimeTrack.View
             {
                 return;
             }
+            string id = txtIdNomina.Text;
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                MessageBox.Show("No se ha seleccionado un registro para actualizar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             // Obtener los valores editados de los TextBoxes
             int idNomina = Convert.ToInt32(txtIdNomina.Text);
             int idEmpleado = Convert.ToInt32(txtIdEmpleado.Text);

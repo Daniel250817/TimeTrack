@@ -83,6 +83,7 @@ namespace TimeTrack.View
             }
             else
             {
+                MessageBox.Show("Che maje, ahora domingo no se trabaja");
                 return;
             }
 

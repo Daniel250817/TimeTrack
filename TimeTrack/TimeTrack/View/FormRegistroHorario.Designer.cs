@@ -165,10 +165,10 @@
             // 
             this.btnInsertar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(45, 40);
+            this.btnInsertar.Location = new System.Drawing.Point(42, 40);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(100, 34);
+            this.btnInsertar.Size = new System.Drawing.Size(105, 34);
             this.btnInsertar.TabIndex = 1;
             this.btnInsertar.Text = "Agregar";
             this.btnInsertar.UseVisualStyleBackColor = true;
@@ -178,10 +178,10 @@
             // 
             this.btnActu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActu.Location = new System.Drawing.Point(45, 104);
+            this.btnActu.Location = new System.Drawing.Point(42, 104);
             this.btnActu.Margin = new System.Windows.Forms.Padding(4);
             this.btnActu.Name = "btnActu";
-            this.btnActu.Size = new System.Drawing.Size(100, 34);
+            this.btnActu.Size = new System.Drawing.Size(105, 34);
             this.btnActu.TabIndex = 1;
             this.btnActu.Text = "Modificar";
             this.btnActu.UseVisualStyleBackColor = true;
@@ -191,10 +191,10 @@
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(45, 164);
+            this.btnEliminar.Location = new System.Drawing.Point(42, 164);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(105, 34);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;

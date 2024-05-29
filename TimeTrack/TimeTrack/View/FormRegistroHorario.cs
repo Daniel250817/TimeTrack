@@ -135,8 +135,13 @@ namespace TimeTrack.View
             {
                 return;
             }
+            if (!_presenter.ValidarCamposidActu(txtIdRegistroHorario.Text))
+            {
+                return;
+            }
 
             // Obtener los valores editados de los controles
+            int idRegHora = Convert.ToInt32(txtIdRegistroHorario.Text);
             int idEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
             int idHorario = Convert.ToInt32(txtIdHorario.Text);
             DateTime fechaInicio = dtpInicio.Value;
@@ -145,6 +150,7 @@ namespace TimeTrack.View
             // Crear un objeto RegistroHorario con los valores editados
             RegistroHorario registroHorario = new RegistroHorario
             {
+                idHorarioEmpleado = idRegHora,
                 idEmpleado = idEmpleado,
                 idHorario = idHorario,
                 fechaInicio = fechaInicio,

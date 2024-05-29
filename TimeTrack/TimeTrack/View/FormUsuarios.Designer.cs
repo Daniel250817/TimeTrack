@@ -30,7 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
+            this.txtIdUsuarios = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnInsertar = new System.Windows.Forms.Button();
@@ -42,9 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIdUsuarios = new System.Windows.Forms.TextBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -74,6 +74,20 @@
             this.panel1.Size = new System.Drawing.Size(1070, 261);
             this.panel1.TabIndex = 3;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(36, 135);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 22);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "ID Usuario";
+            // 
             // txtIdEmpleado
             // 
             this.txtIdEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -82,6 +96,16 @@
             this.txtIdEmpleado.Name = "txtIdEmpleado";
             this.txtIdEmpleado.Size = new System.Drawing.Size(131, 28);
             this.txtIdEmpleado.TabIndex = 18;
+            // 
+            // txtIdUsuarios
+            // 
+            this.txtIdUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIdUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdUsuarios.Location = new System.Drawing.Point(40, 164);
+            this.txtIdUsuarios.Name = "txtIdUsuarios";
+            this.txtIdUsuarios.ReadOnly = true;
+            this.txtIdUsuarios.Size = new System.Drawing.Size(88, 28);
+            this.txtIdUsuarios.TabIndex = 16;
             // 
             // label3
             // 
@@ -113,10 +137,10 @@
             // 
             this.btnInsertar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(45, 40);
+            this.btnInsertar.Location = new System.Drawing.Point(42, 40);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(100, 34);
+            this.btnInsertar.Size = new System.Drawing.Size(105, 34);
             this.btnInsertar.TabIndex = 1;
             this.btnInsertar.Text = "Agregar";
             this.btnInsertar.UseVisualStyleBackColor = true;
@@ -126,10 +150,10 @@
             // 
             this.btnActu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActu.Location = new System.Drawing.Point(45, 104);
+            this.btnActu.Location = new System.Drawing.Point(42, 104);
             this.btnActu.Margin = new System.Windows.Forms.Padding(4);
             this.btnActu.Name = "btnActu";
-            this.btnActu.Size = new System.Drawing.Size(100, 34);
+            this.btnActu.Size = new System.Drawing.Size(105, 34);
             this.btnActu.TabIndex = 1;
             this.btnActu.Text = "Modificar";
             this.btnActu.UseVisualStyleBackColor = true;
@@ -139,10 +163,10 @@
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(45, 164);
+            this.btnEliminar.Location = new System.Drawing.Point(42, 164);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(105, 34);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -217,16 +241,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de credenciales de usuarios\r\n";
             // 
-            // txtIdUsuarios
-            // 
-            this.txtIdUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIdUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdUsuarios.Location = new System.Drawing.Point(40, 164);
-            this.txtIdUsuarios.Name = "txtIdUsuarios";
-            this.txtIdUsuarios.ReadOnly = true;
-            this.txtIdUsuarios.Size = new System.Drawing.Size(88, 28);
-            this.txtIdUsuarios.TabIndex = 16;
-            // 
             // dgvUsuarios
             // 
             this.dgvUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -252,20 +266,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(1040, 263);
             this.dgvUsuarios.TabIndex = 4;
             this.dgvUsuarios.SelectionChanged += new System.EventHandler(this.dgvNominaAdmin_SelectionChanged);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(36, 135);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 22);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "ID Usuario";
             // 
             // FormUsuarios
             // 

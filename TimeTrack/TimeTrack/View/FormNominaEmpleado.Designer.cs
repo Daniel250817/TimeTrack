@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNominaEmployee = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.lblDetails = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNominaEmployee)).BeginInit();
             this.panel1.SuspendLayout();
             this.PanelTop.SuspendLayout();
@@ -47,20 +48,20 @@
             this.dgvNominaEmployee.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNominaEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNominaEmployee.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvNominaEmployee.Location = new System.Drawing.Point(16, 172);
+            this.dgvNominaEmployee.Location = new System.Drawing.Point(16, 201);
             this.dgvNominaEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNominaEmployee.Name = "dgvNominaEmployee";
             this.dgvNominaEmployee.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNominaEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNominaEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvNominaEmployee.RowHeadersWidth = 51;
-            this.dgvNominaEmployee.Size = new System.Drawing.Size(1035, 367);
+            this.dgvNominaEmployee.Size = new System.Drawing.Size(1035, 338);
             this.dgvNominaEmployee.TabIndex = 2;
             this.dgvNominaEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNominaAdmin_CellContentClick);
             this.dgvNominaEmployee.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNominaAdmin_CellFormatting);
@@ -72,11 +73,12 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
             this.panel1.BackgroundImage = global::TimeTrack.Properties.Resources.Imagen_fondo;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.PanelTop);
             this.panel1.Location = new System.Drawing.Point(16, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 140);
+            this.panel1.Size = new System.Drawing.Size(1035, 178);
             this.panel1.TabIndex = 1;
             // 
             // PanelTop
@@ -101,6 +103,18 @@
             this.lblDetails.Size = new System.Drawing.Size(366, 22);
             this.lblDetails.TabIndex = 0;
             this.lblDetails.Text = "El siguiente recuadro pertenece a su nomina";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(46, 125);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 31);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "🔃Actualizar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // FormNominaEmpleado
             // 
@@ -127,5 +141,6 @@
         private System.Windows.Forms.Label lblDetails;
         private System.Windows.Forms.Panel PanelTop;
         private System.Windows.Forms.DataGridView dgvNominaEmployee;
+        private System.Windows.Forms.Button button1;
     }
 }

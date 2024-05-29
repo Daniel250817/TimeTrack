@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.lblDetails = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJornada)).BeginInit();
             this.panel1.SuspendLayout();
             this.PanelTop.SuspendLayout();
@@ -47,7 +48,7 @@
             this.dgvJornada.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvJornada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJornada.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvJornada.Location = new System.Drawing.Point(13, 174);
+            this.dgvJornada.Location = new System.Drawing.Point(13, 199);
             this.dgvJornada.Margin = new System.Windows.Forms.Padding(4);
             this.dgvJornada.Name = "dgvJornada";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -59,7 +60,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvJornada.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvJornada.RowHeadersWidth = 51;
-            this.dgvJornada.Size = new System.Drawing.Size(774, 263);
+            this.dgvJornada.Size = new System.Drawing.Size(774, 238);
             this.dgvJornada.TabIndex = 5;
             this.dgvJornada.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvJornada_CellFormatting);
             // 
@@ -69,11 +70,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
             this.panel1.BackgroundImage = global::TimeTrack.Properties.Resources.Imagen_fondo;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.PanelTop);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 140);
+            this.panel1.Size = new System.Drawing.Size(774, 178);
             this.panel1.TabIndex = 4;
             // 
             // PanelTop
@@ -98,6 +100,18 @@
             this.lblDetails.Size = new System.Drawing.Size(445, 22);
             this.lblDetails.TabIndex = 0;
             this.lblDetails.Text = "El siguiente recuadro pertenece a sus jornadas laboral\r\n";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(46, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 31);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "🔃Actualizar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // FormJornada
             // 
@@ -124,5 +138,6 @@
         private System.Windows.Forms.Panel PanelTop;
         private System.Windows.Forms.Label lblDetails;
         private System.Windows.Forms.DataGridView dgvJornada;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -102,6 +102,10 @@ namespace TimeTrack.View
             {
                 return;
             }
+            if (!_presenter.ValidarCamposidActu(txtIdHorario.Text))
+            {
+                return;
+            }
 
             // Convertir los valores de texto a TimeSpan y luego a string en formato "c" (general long form)
             TimeSpan entradaLV = TimeSpan.Parse(txtLVEntrada.Text);

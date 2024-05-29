@@ -90,5 +90,9 @@ namespace TimeTrack.View
             MessageBox.Show(this, mensaje, titulo, botones, icono);
         }
 
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            _presenter.MostrarNominasEmpleadoLogueado(dgvNominaEmployee, empleado);
+        }
     }
 }
