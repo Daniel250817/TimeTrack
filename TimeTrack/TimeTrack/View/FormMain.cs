@@ -18,15 +18,17 @@ namespace TimeTrack.View
         private Presenter.Presenter _presenter;
 
         int idempleado;
+        string rol;
 
         public FormMain(int idEmpleado, string nombreEmpleado, string apellidoEmpleado, string cargoEmpleado)
         {
             idempleado = idEmpleado;
+            rol = cargoEmpleado;
             InitializeComponent();
             lblUser.Text = "Nombre: " + nombreEmpleado + " " + apellidoEmpleado;
             lblCargo.Text = "Rol: " + cargoEmpleado;
 
-            if(idEmpleado != 1)
+            if(rol != "Administrador")
             {
                 btnRegistro.Visible = false;
                 btnNominaAdmin.Visible = false;
