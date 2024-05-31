@@ -151,5 +151,37 @@ namespace TimeTrack.View
                 MessageBox.Show("Por favor, seleccione un empleado para eliminar.", "Ningún empleado seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "PDF Files|*.pdf",
+                Title = "Guardar como PDF",
+                FileName = "Horario Jornadas.pdf"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                _presenter.ExportarDataGridViewAPDF(dgvRegistrosHorarios, sfd.FileName);
+                MessageBox.Show("Exportación a PDF exitosa.", "Exportar PDF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Guardar como Excel",
+                FileName = "Horario Jornadas.xlsx"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                _presenter.ExportarDataGridViewAExcel(dgvRegistrosHorarios, sfd.FileName);
+                MessageBox.Show("Exportación a Excel exitosa.", "Exportar Excel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

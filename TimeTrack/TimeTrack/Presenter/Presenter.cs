@@ -1,6 +1,10 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -747,7 +751,58 @@ namespace TimeTrack.Presenter
             return idValido;
         }
 
+        public void ExportarDataGridViewAExcel(DataGridView dgv, string filePath)
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("Sheet1");
 
+                for (int i = 0; i < dgv.Columns.Count; i++)
+                {
+                    worksheet.Cell(1, i + 1).Value = dgv.Columns[i].HeaderText;
+                }
+
+                for (int i = 0; i < dgv.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dgv.Columns.Count; j++)
+                    {
+                        worksheet.Cell(i + 2, j + 1).Value = dgv.Rows[i].Cells[j].Value?.ToString() ?? string.Empty;
+                    }
+                }
+
+                workbook.SaveAs(filePath);
+            }
+        }
+
+        public void ExportarDataGridViewAPDF(DataGridView dgv, string filePath)
+        {
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            {
+                Document pdfDoc = new Document(PageSize.A4);
+                PdfWriter.GetInstance(pdfDoc, stream);
+                pdfDoc.Open();
+
+                PdfPTable pdfTable = new PdfPTable(dgv.Columns.Count);
+
+                foreach (DataGridViewColumn column in dgv.Columns)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                    pdfTable.AddCell(cell);
+                }
+
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        pdfTable.AddCell(cell.Value?.ToString() ?? string.Empty);
+                    }
+                }
+
+                pdfDoc.Add(pdfTable);
+                pdfDoc.Close();
+                stream.Close();
+            }
+        }
 
     }
 }

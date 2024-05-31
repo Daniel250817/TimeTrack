@@ -144,6 +144,38 @@ namespace TimeTrack.View
         {
             MessageBox.Show(this, mensaje, titulo, botones, icono);
         }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "PDF Files|*.pdf",
+                Title = "Guardar como PDF",
+                FileName = "Registros Usuarios.pdf"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                _presenter.ExportarDataGridViewAPDF(dgvUsuarios, sfd.FileName);
+                MessageBox.Show("Exportación a PDF exitosa.", "Exportar PDF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Guardar como Excel",
+                FileName = "Registros Usuarios.xlsx"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                _presenter.ExportarDataGridViewAExcel(dgvUsuarios, sfd.FileName);
+                MessageBox.Show("Exportación a Excel exitosa.", "Exportar Excel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
         
 }

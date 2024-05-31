@@ -168,5 +168,36 @@ namespace TimeTrack.View
             _presenter.MostrarJornadasEmpleadoLogueado(dgvJornada, busquedaID);
         }
 
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "PDF Files|*.pdf",
+                Title = "Guardar como PDF",
+                FileName = "Jornadas.pdf"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                _presenter.ExportarDataGridViewAPDF(dgvJornada, sfd.FileName);
+                MessageBox.Show("Exportación a PDF exitosa.", "Exportar PDF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Guardar como Excel",
+                FileName = "Jornadas.xlsx"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                _presenter.ExportarDataGridViewAExcel(dgvJornada, sfd.FileName);
+                MessageBox.Show("Exportación a Excel exitosa.", "Exportar Excel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
